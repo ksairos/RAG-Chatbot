@@ -10,6 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain import hub
 from langchain_core.messages import trim_messages
 from dotenv import load_dotenv
+from ezprint import ezprint
 
 load_dotenv()
 
@@ -25,10 +26,9 @@ class LangChainProcessor:
              allow_partial=False,
              start_on="human",
         )
-        self.prompt = hub.pull("rlm/rag-prompt")
         self.history_aware_retriever = self._create_history_aware_retriever()
         self.qa_chain = self._create_qa_chain()
-        self.chain = self._build_chain()
+        self.chain = create_retrieval_chain(self.history_aware_retriever, self.qa_chain)
         self.chat_store = chat_store
 
     def _get_session_history(self, session_id: str) -> BaseChatMessageHistory:
@@ -40,15 +40,7 @@ class LangChainProcessor:
         return "\n\n".join(doc.page_content for doc in docs["context"])
 
     def _build_chain(self):
-        return (
-            {
-                "context": create_retrieval_chain(self.history_aware_retriever, self.qa_chain) | self._format_docs,
-                "question": RunnablePassthrough()
-            }
-            | self.prompt
-            | self.llm
-            | StrOutputParser()
-        )
+        return create_retrieval_chain(self.history_aware_retriever, self.qa_chain)
     
     def _create_history_aware_retriever(self):
         faiss_path="data/faiss"
@@ -82,13 +74,14 @@ class LangChainProcessor:
     
     def _create_qa_chain(self):
         system_prompt = (
-            "You are an assistant for question-answering tasks. "
-            "Use the following pieces of retrieved context to answer "
-            "the question. If you don't know the answer, say that you "
-            "don't know. Use three sentences maximum and keep the "
-            "answer concise."
+            "You are a highly knowledgeable assistant with access to a large database of accurate and up-to-date information."
+            "Always base your answers on the retrieved documents below and avoid speculating or providing information not found in the database."
+            "If a query is out of scope or no relevant information is retrieved, politely explain that you cannot provide the answer,"
+            "and guide the user to ask something within your area of knowledge."
             "\n\n"
+            "Relevant information retrieved from the database: \n"
             "{context}"
+            "\n"
         )
          
         qa_prompt = ChatPromptTemplate.from_messages(
@@ -113,6 +106,6 @@ class LangChainProcessor:
             output_messages_key="answer",
         )
         config = {"configurable": {"session_id": session_id}}
-        response = with_message_history.invoke({"input": question}, config=config)
+        response = with_message_history.invoke({"input": question}, config=config)["answer"]
         
         return response

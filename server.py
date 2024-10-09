@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from chatbot import LangChainProcessor
+from ezprint import ezprint
 
 # Initialize LangChainProcessor
 langchain_processor = LangChainProcessor()
@@ -8,7 +9,7 @@ langchain_processor = LangChainProcessor()
 app = FastAPI()
 
 def generate_session_id():
-    return 1
+    return 3
 
 class Query(BaseModel):
     question: str
