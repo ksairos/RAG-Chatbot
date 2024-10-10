@@ -7,8 +7,10 @@ from langchain.chains.combine_documents import create_stuff_documents_chain
 from langchain_core.prompts import MessagesPlaceholder
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import trim_messages
+from sqlalchemy.orm import Session
 from dotenv import load_dotenv
-# from ezprint import ezprint
+
+from models import Message
 
 load_dotenv()
 
@@ -29,10 +31,18 @@ class LangChainProcessor:
         self.chain = create_retrieval_chain(self.history_aware_retriever, self.qa_chain)
         self.chat_store = chat_store
 
-    def _get_session_history(self, session_id: str) -> BaseChatMessageHistory:
-            if session_id not in self.chat_store:
-                self.chat_store[session_id] = InMemoryChatMessageHistory()
-            return self.chat_store[session_id]
+    def _get_session_history_db(self, session_id: str, db: Session) -> BaseChatMessageHistory:
+        conversation_id = session_id
+        # Retrieve messages from the database
+        messages = db.query(Message).filter(Message.conversation_id == conversation_id).order_by(Message.created_at).all()
+        chat_history = InMemoryChatMessageHistory()
+        for msg in messages:
+            if msg.role == 'user':
+                chat_history.add_user_message(msg.content)
+            elif msg.role == 'assistant':
+                chat_history.add_ai_message(msg.content)
+        return chat_history
+
 
     def _format_docs(self, docs):
         return "\n\n".join(doc.page_content for doc in docs["context"])
@@ -95,10 +105,10 @@ class LangChainProcessor:
         return qa_chain
 
 
-    def generate_answer(self, question: str, session_id) -> str:
+    def generate_answer(self, question: str, session_id: str, db: Session) -> str:
         with_message_history = RunnableWithMessageHistory(
             self.chain,
-            get_session_history=self._get_session_history,
+            get_session_history=lambda sid: self._get_session_history_db(sid, db),
             input_messages_key="input",
             history_messages_key="chat_history",
             output_messages_key="answer",
