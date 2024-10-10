@@ -1,29 +1,43 @@
 import streamlit as st
 import requests
+import uuid
 
-st.title("My First RAG Chatbot")
+# Initialize session state
+if 'messages' not in st.session_state:
+    st.session_state['messages'] = []
 
-st.write("Enter your query below:")
+if 'session_id' not in st.session_state:
+    st.session_state['session_id'] = str(uuid.uuid4())
 
-with st.form(key='query_form'):
-    user_query = st.text_area('Query:', height=150)
-    submit_button = st.form_submit_button(label='Submit')
+st.title("RAG Chatbot")
 
-if submit_button:
-    if user_query.strip() == "":
-        st.warning("Please enter a query.")
-    else:
-        with st.spinner('Processing...'):
-            # Send the query to FastAPI server
-            url = "http://localhost:8000/generate"
-            payload = {"question": user_query}
-            try:
-                response = requests.post(url, json=payload)
-                if response.status_code == 200:
-                    answer = response.json()['answer']
-                    st.write("### Answer:")
-                    st.write(answer)
-                else:
-                    st.error(f"Error: {response.status_code} {response.text}")
-            except Exception as e:
-                st.error(f"An error occurred: {e}")
+# Display chat messages from history on app rerun
+for message in st.session_state['messages']:
+    with st.chat_message(message['role']):
+        st.write(message['content'])
+
+# Accept user input
+if prompt := st.chat_input("Type your message here..."):
+    # Add user message to history
+    st.session_state['messages'].append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.write(prompt)
+
+    # Prepare payload
+    payload = {
+        "question": prompt,
+        "session_id": st.session_state['session_id']
+    }
+
+    # Send request to backend
+    try:
+        response = requests.post("http://localhost:8000/generate", json=payload)
+        response.raise_for_status()
+        answer = response.json().get('answer', '')
+
+        # Add assistant message to history
+        st.session_state['messages'].append({"role": "assistant", "content": answer})
+        with st.chat_message("assistant"):
+            st.write(answer)
+    except requests.exceptions.RequestException as e:
+        st.error(f"Error: {e}")

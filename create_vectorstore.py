@@ -9,6 +9,8 @@ FAISS_PATH = "data/faiss"
 loader = CSVLoader(file_path=DATA_PATH)
 documents = loader.load()
 
+documents = [{"text": doc[0]} for doc in documents]
+
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
 texts = text_splitter.split_documents(documents)
 
