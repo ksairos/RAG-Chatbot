@@ -161,9 +161,6 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-# too large for github
-*.faiss
-
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
