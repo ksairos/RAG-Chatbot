@@ -176,5 +176,3 @@ cython_debug/
 
 # Streamlit
 .streamlit/
-
-*.db

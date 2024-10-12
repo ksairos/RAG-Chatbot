@@ -105,7 +105,7 @@ class LangChainProcessor:
         return qa_chain
 
 
-    def generate_answer(self, question: str, session_id: str, db: Session) -> str:
+    def generate_answer(self, question: str, session_id, db) -> str:
         with_message_history = RunnableWithMessageHistory(
             self.chain,
             get_session_history=lambda sid: self._get_session_history_db(sid, db),

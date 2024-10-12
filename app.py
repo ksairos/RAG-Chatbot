@@ -1,5 +1,9 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Initialize session state
 if 'conversation_id' not in st.session_state:
@@ -16,7 +20,7 @@ if 'messages_loaded' not in st.session_state:
 
 def load_conversations():
     try:
-        response = requests.get("http://localhost:8000/conversations")
+        response = requests.get(f"{os.getenv('API_URL')}/conversations")
         response.raise_for_status()
         conversations = response.json()
         st.session_state['conversations'] = conversations
@@ -30,7 +34,7 @@ with st.sidebar:
     if st.button("New Conversation"):
         # Create a new conversation
         try:
-            response = requests.post("http://localhost:8000/conversations", json={})
+            response = requests.post(f"{os.getenv('API_URL')}/conversations", json={})
             response.raise_for_status()
             data = response.json()
             st.session_state['conversation_id'] = data['conversation_id']
@@ -60,7 +64,7 @@ st.title("RAG Chatbot")
 # If a conversation is selected, load its messages
 if st.session_state['conversation_id'] is not None and not st.session_state['messages_loaded']:
     try:
-        response = requests.get(f"http://localhost:8000/conversations/{st.session_state['conversation_id']}/messages")
+        response = requests.get(f"{os.getenv('API_URL')}/conversations/{st.session_state['conversation_id']}/messages")
         response.raise_for_status()
         messages = response.json()
         st.session_state['messages'] = messages
@@ -88,7 +92,7 @@ if st.session_state['conversation_id'] is not None:
 
         # Send request to backend
         try:
-            response = requests.post("http://localhost:8000/generate", json=payload)
+            response = requests.post(f"{os.getenv('API_URL')}/generate", json=payload)
             response.raise_for_status()
             answer = response.json().get('answer', '')
 
