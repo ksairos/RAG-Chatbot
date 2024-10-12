@@ -3,10 +3,10 @@ import requests
 
 # Initialize session state
 if 'conversation_id' not in st.session_state:
-    st.session_state['conversation_id'] = None  # No conversation selected yet
+    st.session_state['conversation_id'] = None
 
 if 'conversations' not in st.session_state:
-    st.session_state['conversations'] = []  # List of conversations
+    st.session_state['conversations'] = []
 
 if 'messages' not in st.session_state:
     st.session_state['messages'] = []
@@ -35,38 +35,25 @@ with st.sidebar:
             data = response.json()
             st.session_state['conversation_id'] = data['conversation_id']
             st.session_state['messages'] = []
-            st.session_state['messages_loaded'] = True  # No messages to load
+            st.session_state['messages_loaded'] = False
             # Reload conversations
             load_conversations()
         except requests.exceptions.RequestException as e:
             st.error(f"Error creating conversation: {e}")
     st.write("")
 
-    # List of conversations
-    conversation_names = []
-    conversation_ids = []
-    for conv in st.session_state['conversations']:
-        name = conv['name'] or f"Conversation {conv['conversation_id']}"
-        conversation_names.append(name)
-        conversation_ids.append(conv['conversation_id'])
-
-    if conversation_names:
-        selected_index = 0
-        if st.session_state['conversation_id'] in conversation_ids:
-            selected_index = conversation_ids.index(st.session_state['conversation_id'])
-
-        selected_conversation = st.selectbox(
-            "Select a conversation",
-            options=conversation_names,
-            index=selected_index,
-            key='conversation_select'
-        )
-        # Update the conversation_id based on selection
-        selected_conv_id = conversation_ids[conversation_names.index(selected_conversation)]
-        if st.session_state['conversation_id'] != selected_conv_id:
-            st.session_state['conversation_id'] = selected_conv_id
-            st.session_state['messages_loaded'] = False
-            st.session_state['messages'] = []
+    # Display conversations as a list
+    if st.session_state['conversations']:
+        for conv in st.session_state['conversations']:
+            # Display conversation name with incrementing number
+            conv_name = conv['name'] or f"Conversation {conv['conversation_number']}"
+            if st.button(conv_name, key=conv['conversation_id']):
+                if st.session_state['conversation_id'] != conv['conversation_id']:
+                    st.session_state['conversation_id'] = conv['conversation_id']
+                    st.session_state['messages_loaded'] = False
+                    st.session_state['messages'] = []
+    else:
+        st.write("No conversations yet.")
 
 st.title("RAG Chatbot")
 
