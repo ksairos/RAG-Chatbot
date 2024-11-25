@@ -1,0 +1,5856 @@
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+Lecture 1 – Part 1
+Course Introduction
+
+SUBJECT INTRODUCTION
+ This course covers the software development process,
+
+from requirements elicitation and analysis, through
+specification and design, to implementation, integration,
+testing, and evolution (maintenance).
+ A variety of concepts, principles, techniques, and tools are
+presented, covering topics such as software processes,
+project management, people management, software
+requirements, system models, architectural and detailed
+design, user interface design, programming practices,
+verification and validation, and software evolution.
+Although the emphasis will be on modern, object-oriented
+approaches some more traditional, structured software
+engineering techniques will also be discussed.
+
+
+
+Introduction to Software Engineering
+Introduction
+ Software processes
+ Agile software development
+ Requirements engineering
+
+
+
+
+Dependability and Security
+Sociotechnical systems
+ Dependability engineering
+ Security engineering
+ Dependability and security assurance
+
+
+
+
+Advanced Software Engineering
+Software reuse
+ Distributed software engineering
+ Service-oriented architecture
+ Aspect-oriented software engineering
+
+
+
+
+Software Management
+Project management
+ Quality management
+ Configuration management
+ Process improvement
+
+
+Mangal Sain,
+Dongseo University, Korea
+
+4
+
+BOOK REFERENCE
+Ian Sommerville, Software Engineering,
+9th Edition, Addison-Wesley, 2011.
+Scientific papers and other material will
+be listed during the course and will be
+made available through the site
+
+Mangal Sain,
+Dongseo University, Korea
+
+EVALUATION
+ Attendance
+ Mid Term
+ Assignment
+
+ Participation
+ Final Exam
+
+: 10%
+: 20%
+: 20%
+: 10%
+: 40% ( Team Based or individual)
+
+Mangal Sain,
+Dongseo University, Korea
+
+PREREQUISITES
+ Basic knowledge of:
+ Operating systems
+ Computer architectures
+
+ Knowledge of one programming Language
+ Design Patterns etc
+
+8
+
+TOPICS COVERED
+ Professional software development
+▪
+
+What is meant by software engineering
+
+ Software engineering ethics
+▪
+
+A brief introduction to ethical issues that affect
+software engineering
+
+ Case studies
+▪
+
+An introduction to three examples that are
+used
+
+Mangal Sain,
+Dongseo University, Korea
+
+9
+
+SOFTWARE ENGINEERING
+ The economies of ALL developed nations are
+
+dependent on software
+ More and more systems are software controlled
+ Software engineering is concerned with theories,
+methods and tools for professional software
+development
+ Expenditure on software represents a
+significant fraction of GNP in all developed countries
+
+Mangal Sain,
+Dongseo University, Korea
+
+10
+
+SOFTWARE COSTS
+ Software costs often dominate computer system
+
+costs. The costs of software on a PC are often
+greater than the hardware cost
+ Software costs more to maintain than it does to
+develop. For systems with a long life, maintenance
+costs may be several times development costs
+ Software engineering is concerned with costeffective software development
+
+Mangal Sain,
+Dongseo University, Korea
+
+11
+
+SOFTWARE PRODUCTS
+ Generic products
+
+▪
+
+Stand-alone systems that are marketed and sold to any
+customer who wishes to buy them
+▪ Examples – PC software such as graphics programs,
+project management tools; CAD software; software for
+specific markets such as appointments systems for
+dentists
+ Customized products
+
+▪
+
+Software that is commissioned by a specific customer to
+meet their own needs
+▪ Examples – embedded control systems, air traffic control
+software, traffic monitoring systems
+
+Mangal Sain,
+Dongseo University, Korea
+
+12
+
+PRODUCT SPECIFICATION
+ Generic products
+▪
+
+The specification of what the software should do is
+owned by the software developer and decisions on
+software change are made by the developer
+
+ Customized products
+
+▪
+
+The specification of what the software should do is
+owned by the customer for the software and they make
+decisions on software changes that are required
+
+Mangal Sain,
+Dongseo University, Korea
+
+13
+
+FREQUENTLY ASKED QUESTIONS ABOUT SOFTWARE ENGINEERING
+Question
+
+Answer
+
+What is software?
+
+Computer programs and associated documentation. Software products
+may be developed for a particular customer or may be developed for a
+general market.
+What are the attributes of good Good software should deliver the required functionality and performance to
+software?
+the user and should be maintainable, dependable and usable.
+What is software engineering?
+
+Software engineering is an engineering discipline that is concerned with all
+aspects of software production.
+
+What are the fundamental software Software specification, software development, software validation and
+engineering activities?
+software evolution.
+What is the difference between Computer science focuses on theory and fundamentals; software
+software
+engineering
+and engineering is concerned with the practicalities of developing and
+computer science?
+delivering useful software.
+What is the difference between System engineering is concerned with all aspects of computer-based
+software engineering and system systems development including hardware, software and process
+engineering?
+engineering. Software engineering is part of this more general process.
+Mangal Sain,
+Dongseo University, Korea
+
+14
+
+FREQUENTLY ASKED QUESTIONS ABOUT SOFTWARE ENGINEERING
+Question
+
+Answer
+
+What are the key challenges Coping with increasing diversity, demands for reduced delivery times and
+facing software engineering? developing trustworthy software.
+What are the costs of software Roughly 60% of software costs are development costs, 40% are testing costs.
+engineering?
+For custom software, evolution costs often exceed development costs.
+What are the best software While all software projects have to be professionally managed and developed,
+engineering techniques and different techniques are appropriate for different types of system. For example,
+methods?
+games should always be developed using a series of prototypes whereas
+safety critical control systems require a complete and analyzable specification
+to be developed. You can’t, therefore, say that one method is better than
+another.
+
+What differences has the web The web has led to the availability of software services and the possibility of
+made
+to
+software developing highly distributed service-based systems. Web-based systems
+engineering?
+development has led to important advances in programming languages and
+software reuse.
+Mangal Sain,
+Dongseo University, Korea
+
+15
+
+ESSENTIAL ATTRIBUTES OF GOOD SOFTWARE
+Product characteristic
+
+Description
+
+Maintainability
+
+Software should be written in such a way so that it can evolve to meet the
+changing needs of customers. This is a critical attribute because software
+change is an inevitable requirement of a changing business environment.
+
+Dependability and Security
+
+Software dependability includes a range of characteristics including reliability,
+security and safety. Dependable software should not cause physical or
+economic damage in the event of system failure. Malicious users should not
+be able to access or damage the system.
+
+Efficiency
+
+Software should not make wasteful use of system resources such as memory
+and processor cycles. Efficiency therefore includes responsiveness,
+processing time, memory utilisation, etc.
+
+Acceptability
+
+Software must be acceptable to the type of users for which it is designed. This
+means that it must be understandable, usable and compatible with other
+systems that they use.
+Mangal Sain,
+Dongseo University, Korea
+
+Lecture 1 – Part 2
+
+Professional software development
+
+17
+
+SOFTWARE ENGINEERING
+ Software engineering is an engineering discipline
+
+that is concerned with all aspects of software
+production from the early stages of system
+specification through to maintaining the system after
+it has gone into use.
+ Engineering discipline
+▪
+
+Using appropriate theories and methods to solve
+problems bearing in mind organizational and financial
+constraints.
+
+ All aspects of software production
+
+▪
+
+Not just technical process of development. Also project
+management and the development of tools, methods etc.
+to support software production.
+Mangal Sain,
+Dongseo University, Korea
+
+18
+
+IMPORTANCE OF SOFTWARE ENGINEERING
+ More and more, individuals and society rely on
+
+advanced software systems. We need to be able to
+produce reliable and trustworthy systems economically
+and quickly.
+ It is usually cheaper, in the long run, to use software
+engineering methods and techniques for software
+systems rather than just write the programs as if it was a
+personal programming project. For most types of
+system, the majority of costs are the costs of changing
+the software after it has gone into use.
+
+Mangal Sain,
+Dongseo University, Korea
+
+19
+
+SOFTWARE PROCESS ACTIVITIES
+ Software specification, where customers and engineers
+
+define the software that is to be produced and the
+constraints on its operation
+ Software development, where the software is designed
+and programmed
+ Software validation, where the software is checked to
+ensure that it is what the customer requires
+ Software evolution, where the software is modified to
+reflect changing customer and market requirements
+
+Mangal Sain,
+Dongseo University, Korea
+
+20
+
+GENERAL ISSUES THAT AFFECT MOST SOFTWARE
+ Heterogeneity
+▪
+
+Increasingly, systems are required to operate as distributed
+systems across networks that include different types of
+computer and mobile devices
+
+ Business and social change
+▪
+
+Business and society are changing incredibly quickly as
+emerging economies develop and new technologies become
+available. They need to be able to change their existing
+software and to rapidly develop new software
+
+ Security and trust
+▪
+
+As software is intertwined with all aspects of our lives, it is
+essential that we can trust that software
+
+Mangal Sain,
+Dongseo University, Korea
+
+21
+
+SOFTWARE ENGINEERING DIVERSITY
+ There are many different types of software system and
+
+there is no universal set of software techniques that is
+applicable to all of these
+ The software engineering methods and tools used
+depend on the type of application being developed, the
+requirements of the customer and the background of the
+development team
+
+Mangal Sain,
+Dongseo University, Korea
+
+APPLICATION TYPES
+ Stand-alone applications
+
+▪
+
+These are application systems that run on a local computer,
+such as a PC. They include all necessary functionality and do
+not need to be connected to a network.
+
+ Interactive transaction-based applications
+▪
+
+Applications that execute on a remote computer and are
+accessed by users from their own PCs or terminals. These
+include web applications such as e-commerce applications.
+
+ Embedded control systems
+▪
+
+These are software control systems that control and manage
+hardware devices. Numerically, there are probably more
+embedded systems than any other type of system.
+
+Mangal Sain,
+Dongseo University, Korea
+
+23
+
+APPLICATION TYPES
+ Batch processing systems
+
+▪
+
+These are business systems that are designed to process data
+in large batches. They process large numbers of individual
+inputs to create corresponding outputs.
+
+ Entertainment systems
+▪
+
+These are systems that are primarily for personal use and
+which are intended to entertain the user
+
+ Systems for modeling and simulation
+
+▪
+
+These are systems that are developed by scientists and
+engineers to model physical processes or situations, which
+include many, separate, interacting objects
+
+Mangal Sain,
+Dongseo University, Korea
+
+24
+
+APPLICATION TYPES
+ Data collection systems
+▪
+
+These are systems that collect data from their environment
+using a set of sensors and send that data to other systems
+for processing
+
+ Systems of systems
+▪
+
+These are systems that are composed of a number of other
+software systems
+
+Mangal Sain,
+Dongseo University, Korea
+
+25
+
+SOFTWARE ENGINEERING FUNDAMENTALS
+ Some fundamental principles apply to all types of
+
+software system, irrespective of the development
+techniques used:
+▪
+
+Systems should be developed using a managed and
+understood development process. Of course, different
+processes are used for different types of software.
+▪ Dependability and performance are important for all types of
+system
+▪ Understanding and managing the software specification and
+requirements (what the software should do) are important
+▪ Where appropriate, you should reuse software that has already
+been developed rather than write new software
+
+Mangal Sain,
+Dongseo University, Korea
+
+26
+
+SOFTWARE ENGINEERING AND THE WEB
+ The Web is now a platform for running application and
+
+organizations are increasingly developing web-based
+systems rather than local systems
+ Web services allow application functionality to be
+accessed over the web
+ Cloud computing is an approach to the provision of
+computer services where applications run remotely on
+the ‘cloud’
+▪
+
+Users do not buy software buy pay according to use
+
+Mangal Sain,
+Dongseo University, Korea
+
+27
+
+WEB SOFTWARE ENGINEERING
+ Software reuse is the dominant approach for constructing
+
+web-based systems
+▪
+
+When building these systems, you think about how you can
+assemble them from pre-existing software components and
+systems
+
+ Web-based systems should be developed and delivered
+
+incrementally
+▪
+
+It is now generally recognized that it is impractical to specify all
+the requirements for such systems in advance
+
+ User interfaces, constrained by capabilities of web
+
+browsers
+▪
+
+Technologies such as AJAX allow rich interfaces to be created
+within a web browser but are still difficult to use. Web forms with
+local scripting are more commonly used.
+Mangal Sain,
+Dongseo University, Korea
+
+28
+
+WEB-BASED SOFTWARE ENGINEERING
+ Web-based systems are complex distributed systems but
+
+the fundamental principles of software engineering
+discussed previously are as applicable to them as they
+are to any other types of system
+ The fundamental ideas of software engineering,
+discussed in the previous section, apply to web-based
+software in the same way that they apply to other types of
+software system
+
+Mangal Sain,
+Dongseo University, Korea
+
+29
+
+KEY POINTS [PROFESSIONAL SOFTWARE DEVELOPMENT]
+ Software engineering is an engineering discipline that is
+
+concerned with all aspects of software production
+ Essential software product attributes are maintainability,
+dependability and security, efficiency and acceptability
+ The high-level activities of specification, development,
+validation and evolution are part of all software processes
+ The fundamental notions of software engineering are
+universally applicable to all types of system development
+
+Mangal Sain,
+Dongseo University, Korea
+
+30
+
+KEY POINTS [PROFESSIONAL SOFTWARE DEVELOPMENT]
+ There are many different types of system and each
+
+requires appropriate software engineering tools and
+techniques for their development
+ The fundamental ideas of software engineering are
+applicable to all types of software system
+
+Mangal Sain,
+Dongseo University, Korea
+
+31
+
+KEY POINTS [PROFESSIONAL SOFTWARE DEVELOPMENT]
+What are the key challenges facing software engineering?
+ Rapid technology advancement
+ Increasing customer demands
+ Time limitations
+ Limited infrastructure/resources
+ Conflicts with software testing teams
+
+Mangal Sain,
+Dongseo University, Korea
+
+Lecture 1 – Part 3
+
+Software engineering ethics and
+Case studies
+
+33
+
+SOFTWARE ENGINEERING ETHICS
+ Software engineering involves wider responsibilities than
+
+simply the application of technical skills
+ Software engineers must behave in an honest and
+ethically responsible way if they are to be respected as
+professionals
+ Ethical behaviour is more than simply upholding the law
+but involves following a set of principles that are morally
+correct
+
+Mangal Sain,
+Dongseo University, Korea
+
+34
+
+ISSUES OF PROFESSIONAL RESPONSIBILITY
+ Confidentiality
+▪
+
+Engineers should normally respect the confidentiality of
+their employers or clients irrespective of whether or not
+a formal confidentiality agreement has been signed
+
+ Competence
+▪
+
+Engineers should not misrepresent their level of
+competence. They should not knowingly accept work
+which is out with their competence
+
+Mangal Sain,
+Dongseo University, Korea
+
+35
+
+ISSUES OF PROFESSIONAL RESPONSIBILITY
+ Intellectual property rights
+
+▪
+
+Engineers should be aware of local laws governing the use of
+intellectual property such as patents, copyright, etc. They
+should be careful to ensure that the intellectual property of
+employers and clients is protected.
+
+ Computer misuse
+▪
+
+Software engineers should not use their technical skills to
+misuse other people’s computers. Computer misuse ranges
+from relatively trivial (game playing on an employer’s
+machine, say) to extremely serious (dissemination of viruses).
+
+Mangal Sain,
+Dongseo University, Korea
+
+36
+
+ACM/IEEE CODE OF ETHICS
+ The professional societies in the US have cooperated to
+
+produce a code of ethical practice
+ Members of these organisations sign up to the code of
+practice when they join
+ The Code contains eight Principles related to the
+behaviour of and decisions made by professional
+software engineers, including practitioners, educators,
+managers, supervisors and policy makers, as well as
+trainees and students of the profession
+
+Mangal Sain,
+Dongseo University, Korea
+
+37
+
+RATIONALE FOR THE CODE OF ETHICS
+▪
+
+Computers have a central and growing role in commerce,
+industry, government, medicine, education, entertainment and
+society at large. Software engineers are those who contribute
+by direct participation or by teaching, to the analysis,
+specification, design, development, certification, maintenance
+and testing of software systems.
+▪ Because of their roles in developing software systems, software
+engineers have significant opportunities to do good or cause
+harm, to enable others to do good or cause harm, or to
+influence others to do good or cause harm. To ensure, as much
+as possible, that their efforts will be used for good, software
+engineers must commit themselves to making software
+engineering a beneficial and respected profession.
+
+Mangal Sain,
+Dongseo University, Korea
+
+38
+
+THE ACM/IEEE CODE OF ETHICS
+Software Engineering Code of Ethics and Professional Practice
+ACM/IEEE-CS Joint Task Force on Software Engineering Ethics and Professional
+Practices
+PREAMBLE
+The short version of the code summarizes aspirations at a high level of the
+abstraction; the clauses that are included in the full version give examples and
+details of how these aspirations change the way we act as software engineering
+professionals. Without the aspirations, the details can become legalistic and
+tedious; without the details, the aspirations can become high sounding but empty;
+together, the aspirations and the details form a cohesive code.
+Software engineers shall commit themselves to making the analysis,
+specification, design, development, testing and maintenance of software a
+beneficial and respected profession. In accordance with their commitment to the
+health, safety and welfare of the public, software engineers shall adhere to the
+following Eight Principles:
+Mangal Sain,
+Dongseo University, Korea
+
+39
+
+ETHICAL PRINCIPLES
+1. PUBLIC - Software engineers shall act consistently with the public interest.
+2. CLIENT AND EMPLOYER - Software engineers shall act in a manner that is
+in the best interests of their client and employer consistent with the public interest.
+3. PRODUCT - Software engineers shall ensure that their products and related
+modifications meet the highest professional standards possible.
+4. JUDGMENT - Software engineers shall maintain integrity and independence in
+their professional judgment.
+5. MANAGEMENT - Software engineering managers and leaders shall subscribe
+to and promote an ethical approach to the management of software development
+and maintenance.
+6. PROFESSION - Software engineers shall advance the integrity and reputation
+of the profession consistent with the public interest.
+7. COLLEAGUES - Software engineers shall be fair to and supportive of their
+colleagues.
+8. SELF - Software engineers shall participate in lifelong learning regarding the
+practice of their profession and shall promote an ethical approach to the practice
+of the profession.
+Mangal Sain,
+Dongseo University, Korea
+
+40
+
+ETHICAL DILEMMAS
+ Disagreement in principle with the policies of senior
+
+management
+ Your employer acts in an unethical way and releases a
+safety-critical system without finishing the testing of the
+system
+ Participation in the development of military weapons
+systems or nuclear systems
+
+Mangal Sain,
+Dongseo University, Korea
+
+41
+
+CASE STUDIES
+ A personal insulin pump
+▪
+
+An embedded system in an insulin pump used by
+diabetics to maintain blood glucose control
+
+ A mental health case patient management system
+▪
+
+A system used to maintain records of people receiving
+care for mental health problems
+
+ A wilderness weather station
+▪
+
+A data collection system that collects data about
+weather conditions in remote areas
+
+Mangal Sain,
+Dongseo University, Korea
+
+42
+
+INSULIN PUMP CONTROL SYSTEM
+ Collects data from a blood sugar sensor and calculates
+
+the amount of insulin required to be injected
+ Calculation based on the rate of change of blood sugar
+levels
+ Sends signals to a micro-pump to deliver the correct
+dose of insulin
+ Safety-critical system as low blood sugars can lead to
+brain malfunctioning, coma and death; high-blood sugar
+levels have long-term consequences such as eye and
+kidney damage
+
+Mangal Sain,
+Dongseo University, Korea
+
+43
+
+INSULIN PUMP HARDWARE ARCHITECTURE
+
+Mangal Sain,
+Dongseo University, Korea
+
+44
+
+ACTIVITY MODEL OF THE INSULIN PUMP
+
+Mangal Sain,
+Dongseo University, Korea
+
+45
+
+ESSENTIAL HIGH-LEVEL REQUIREMENTS
+ The system shall be available to deliver insulin when
+
+required.
+ The system shall perform reliably and deliver the correct
+amount of insulin to counteract the current level of blood
+sugar.
+ The system must therefore be designed and
+implemented to ensure that the system always meets
+these requirements.
+
+Mangal Sain,
+Dongseo University, Korea
+
+46
+
+A PATIENT INFORMATION SYSTEM FOR MENTAL HEALTH CARE
+ A patient information system to support mental health
+
+care is a medical information system that maintains
+information about patients suffering from mental health
+problems and the treatments that they have received
+ Most mental health patients do not require dedicated
+hospital treatment but need to attend specialist clinics
+regularly where they can meet a doctor who has detailed
+knowledge of their problems
+ To make it easier for patients to attend, these clinics are
+not just run in hospitals. They may also be held in local
+medical practices or community centres.
+
+Mangal Sain,
+Dongseo University, Korea
+
+47
+
+MHC-PMS
+ The MHC-PMS (Mental Health Care-Patient Management
+
+System) is an information system that is intended for use
+in clinics
+ It makes use of a centralized database of patient
+information but has also been designed to run on a PC,
+so that it may be accessed and used from sites that do
+not have secure network connectivity
+ When the local systems have secure network access,
+they use patient information in the database but they can
+download and use local copies of patient records when
+they are disconnected
+
+Mangal Sain,
+Dongseo University, Korea
+
+48
+
+THE ORGANIZATION OF THE MHC-PMS
+
+Mangal Sain,
+Dongseo University, Korea
+
+49
+
+MHC-PMS KEY FEATURES
+ Individual care management
+
+▪
+
+Clinicians can create records for patients, edit the information in
+the system, view patient history, etc. The system supports data
+summaries so that doctors can quickly learn about the key
+problems and treatments that have been prescribed.
+
+ Patient monitoring
+▪
+
+The system monitors the records of patients that are involved in
+treatment and issues warnings if possible problems are detected
+
+ Administrative reporting
+
+▪
+
+The system generates monthly management reports showing
+the number of patients treated at each clinic, the number of
+patients who have entered and left the care system, number of
+patients sectioned, the drugs prescribed and their costs, etc.
+
+Mangal Sain,
+Dongseo University, Korea
+
+50
+
+MHC-PMS CONCERNS
+ Privacy
+▪
+
+It is essential that patient information is confidential and is
+never disclosed to anyone apart from authorised medical staff
+and the patient themselves
+
+ Safety
+▪
+
+Some mental illnesses cause patients to become suicidal or a
+danger to other people. Wherever possible, the system should
+warn medical staff about potentially suicidal or dangerous
+patients.
+▪ The system must be available when needed otherwise safety
+may be compromised and it may be impossible to prescribe the
+correct medication to patients
+
+Mangal Sain,
+Dongseo University, Korea
+
+51
+
+WILDERNESS WEATHER STATION
+ The government of a country with large areas of
+
+wilderness decides to deploy several hundred weather
+stations in remote areas
+ Weather stations collect data from a set of instruments that
+measure temperature and pressure, sunshine, rainfall,
+wind speed and wind direction
+▪
+
+The weather station includes a number of instruments that
+measure weather parameters such as the wind speed and
+direction, the ground and air temperatures, the barometric
+pressure and the rainfall over a 24-hour period. Each of these
+instruments is controlled by a software system that takes
+parameter readings periodically and manages the data collected
+from the instruments.
+
+
+Mangal Sain,
+Dongseo University, Korea
+
+52
+
+THE WEATHER STATION’S ENVIRONMENT
+
+Mangal Sain,
+Dongseo University, Korea
+
+53
+
+WEATHER INFORMATION SYSTEM
+ The weather station system
+▪
+
+This is responsible for collecting weather data, carrying out some
+initial data processing and transmitting it to the data management
+system.
+
+ The data management and archiving system
+▪
+
+This system collects the data from all of the wilderness weather
+stations, carries out data processing and analysis and archives
+the data.
+
+ The station maintenance system
+
+▪
+
+This system can communicate by satellite with all wilderness
+weather stations to monitor the health of these systems and
+provide reports of problems.
+
+Mangal Sain,
+Dongseo University, Korea
+
+54
+
+ADDITIONAL SOFTWARE FUNCTIONALITY
+ Monitor the instruments, power and communication
+
+hardware and report faults to the management system.
+ Manage the system power, ensuring that batteries are
+charged whenever the environmental conditions permit
+but also that generators are shut down in potentially
+damaging weather conditions, such as high wind.
+ Support dynamic reconfiguration where parts of the
+software are replaced with new versions and where
+backup instruments are switched into the system in the
+event of system failure.
+
+Mangal Sain,
+Dongseo University, Korea
+
+KEY POINTS
+ Software engineers have responsibilities to the
+
+engineering profession and society. They should not
+simply be concerned with technical issues.
+ Professional societies publish codes of conduct which
+set out the standards of behaviour expected of their
+members.
+ Three case studies are used in the book:
+▪
+
+An embedded insulin pump control system
+▪ A system for mental health care patient management
+▪ A wilderness weather station
+
+Mangal Sain,
+Dongseo University, Korea
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+Lecture 2 Part 1
+
+Types of Software Projects
+
+TYPES OF SOFTWARE PROJECTS
+ Software product development projects
+
+ Software service projects
+
+SOFTWARE SERVICES
+ Software service is an umbrella term,
+
+includes:
+ Software customization
+ Software maintenance
+ Software testing
+
+ Also contract programmers(CP) carrying out
+
+coding or any other assigned activities.
+
+FACTORS RESPONSIBLE FOR ACCELERATED GROWTH OF
+SERVICES..
+ Now lots of code is available in a
+
+company:
+ New software can be developed by modifying
+
+the closest.
+ Speed of conducting business has
+
+increased tremendously:
+ Requires shortening of project duration
+
+CHANGES IN SOFTWARE PROJECTS CHARACTERISTICS IN
+LAST 40 YEARS
+ 40 years back, very few software existed
+ Every project started from scratch
+
+ Projects were multi year long
+ The programming languages that were used early
+
+hardly provided any scope for reuse:
+ Fortran, Pascal, COBOL, BASIC
+ No application was GUI-based;
+
+ Mostly command selection from displayed text menu
+
+items.
+
+TRADITIONAL VERSUS MODERN PROJECTS
+ Projects are increasingly becoming services:
+
+
+Either tailor some existing software or reuse pre-built
+libraries.
+
+ Facilitate and accommodate client feedbacks
+ Facilitate customer participation in project
+
+development work
+ Incremental software delivery with evolving
+functionalities
+ No software is being developed from scratch –
+significant reuse is being made….
+
+COMPUTER SYSTEM ENGINEERING
+ Many products require development of
+
+software as well as specific hardware to
+run it:
+ A coffee vending machine,
+ A robotic toy,
+
+ A new health band product, etc.
+
+ Computer system engineering:
+ Encompasses software engineering.
+
+COMPUTER SYSTEM ENGINEERING (CONT.)
+ Typically, hardware and software are
+
+developed together
+ Hardware simulator is used during software
+
+development.
+ Integration of hardware and software
+ Final system testing
+
+COMPUTER SYSTEM ENGINEERING (CONT.)
+
+EMERGENCE OF SOFTWARE ENGINEERING
+ Early Computer Programming (1950s):
+ Programs were being written in assembly
+
+language.
+ Programs were limited to about a few
+hundreds of lines of assembly code.
+
+EARLY COMPUTER PROGRAMMING (50S)
+ Every programmer developed his own style
+
+of writing programs:
+ according to his intuition
+
+programming).
+
+(exploratory
+
+High-Level Language Programming (Early 60s)
+• HIGH-LEVEL LANGUAGES SUCH AS FORTRAN,
+ALGOL, AND COBOL WERE INTRODUCED:
+− This reduced software development efforts
+greatly.
+
+High-Level Language Programming (Early 60s)
+
+• SOFTWARE DEVELOPMENT STYLE WAS STILL
+EXPLORATORY.
+− Typical program sizes were limited to a few
+thousands of lines of source code.
+
+CONTROL FLOW-BASED DESIGN (LATE 60S)
+ Size and complexity of programs increased
+
+further:
+ exploratory programming style proved to be
+
+insufficient.
+ Programmers found:
+ very difficult to write cost-effective and correct
+
+programs.
+
+CONTROL FLOW-BASED DESIGN (LATE 60S)
+ Programmers found:
+ programs written by others very difficult to
+
+understand and maintain.
+ To cope up with this problem,
+
+experienced programmers advised: ``Pay
+particular attention to the design of the program's control
+structure.'’
+
+CONTROL FLOW-BASED DESIGN (LATE 60S)
+ A program's control structure
+
+indicates:
+
+
+the sequence in which the program's
+instructions are executed.
+
+ To help design programs having
+
+good control structure:
+ flow charting technique was
+
+developed.
+
+CONTROL FLOW-BASED DESIGN (LATE 60S)
+ Using
+
+flow charting
+technique:
+ one can represent and design a
+
+program's control structure.
+ Usually one understands a
+program:
+
+
+by mentally simulating the
+program's execution sequence.
+
+CONTROL FLOW-BASED DESIGN
+(LATE 60S)
+
+ A program having
+
+a messy flow
+chart
+representation:
+ difficult to
+
+understand and
+debug.
+
+CONTROL FLOW-BASED DESIGN (L
+
+ATE 60S)
+
+ It was found:
+
+ GO TO statements makes control structure
+
+of a program messy
+ GO TO statements alter the flow of control
+arbitrarily.
+ The need to restrict use of GO TO
+statements was recognized.
+
+CONTROL FLOW-BASED DESIGN (LATE 60S)
+ Many programmers
+
+had extensively used
+
+assembly languages.
+ JUMP instructions are frequently used for
+
+program branching in assembly languages,
+ programmers considered use of GO TO
+statements inevitable.
+
+CONTROL-FLOW BASED DESIGN (LATE 60S)
+ At that time, Dijkstra published his
+
+article:
+ “Goto Statement Considered Harmful”
+
+Comm. of ACM, 1969.
+ Many programmers were unhappy to
+
+read his article.
+
+CONTROL FLOW-BASED DESIGN (L
+
+ATE 60S)
+
+ They published several counter
+
+articles:
+
+ highlighting the advantages and
+
+inevitability of GO TO statements.
+
+CONTROL FLOW-BASED DESIGN (L
+
+ATE 60S)
+
+ But, soon it was conclusively
+
+proved:
+ only three programming constructs
+
+are sufficient to express any
+programming logic:
+sequence (e.g. a=0;b=5;)
+selection (e.g.if(c=true) k=5 else
+m=5;)
+
+
+iteration (e.g. while(k>0) k=j-k;)
+
+CONTROL-FLOW BASED DESIGN (L
+
+ATE 60S)
+
+ Everyone accepted:
+ it is possible to solve any
+
+programming problem without using
+GO TO statements.
+ This formed the basis of Structured
+Programming methodology.
+
+Lecture 2 Part 2
+
+Structured Programming
+
+STRUCTURED PROGRAMMING
+A program is called structured
+
+ when it uses only the following
+
+types of constructs:
+sequence,
+selection,
+iteration
+
+
+STRUCTURED PROGRAMS
+ Unstructured control flows are
+
+avoided.
+ Consist of a neat set of modules.
+ Use single-entry, single-exit program
+
+constructs.
+
+Structured programs
+• HOWEVER, VIOLATIONS TO THIS FEATURE
+ARE PERMITTED:
+− due to practical considerations such as:
+ premature loop exit to support exception
+handling.
+
+ADVANTAGE OF STRUCTURED PROGRAMMING
+ Structured programs are:
+ Easier to read and understand,
+ easier to maintain,
+ require less effort and time for
+
+development.
+ Less Buggy
+
+STRUCTURED PROGRAMMING
+ Research experience shows:
+ programmers commit less number of
+
+errors
+while using structured if-then-else and dowhile statements
+ compared to test-and-branch constructs.
+
+
+DATA STRUCTURE-ORIENTED DESIGN (EARLY 70S)
+ Soon it was discovered:
+ it is important to pay more attention
+
+to the design of data structures of a
+program
+
+
+than to the design of its control
+structure.
+
+DATA STRUCTURE-ORIENTED DESIGN (EARLY 70S)
+ Techniques which emphasize designing
+
+the data structure:
+ derive program structure from it:
+
+
+are called data structure-oriented
+design techniques.
+
+DATA STRUCTURE ORIENTED DESIGN (EARLY 70S)
+ Example of data structure-oriented design
+
+technique:
+ Jackson's Structured Programming(JSP)
+
+methodology
+
+
+developed by Michael Jackson in 1970s.
+
+Data Structure Oriented Design (Early 70s)
+
+• JSP TECHNIQUE:
+− program code structure should
+correspond to the data structure.
+
+Data Structure Oriented Design (Early 70s)
+• IN JSP METHODOLOGY:
+− a program's data structures are first
+designed using notations for
+ sequence, selection, and iteration.
+
+− Then data structure design is used :
+ to derive the program structure.
+
+Data Structure Oriented Design (Early 70s)
+• SEVERAL OTHER DATA STRUCTURE-ORIENTED
+METHODOLOGIES ALSO EXIST:
+− e.g., Warnier-Orr Methodology.
+
+DATA FLOW-ORIENTED DESIGN (LATE 70S)
+ Data flow-oriented techniques
+
+advocate:
+ the data items input to a system must first be
+
+identified,
+ processing required on the data items to
+produce the required outputs should be
+determined.
+
+DATA FLOW-ORIENTED DESIGN (LATE 70S)
+ Data flow technique identifies:
+ different processing stations
+
+(functions) in a system
+ the items (data) that flow between
+processing stations.
+
+DATA FLOW-ORIENTED DESIGN (L
+
+ATE 70S)
+
+ Data flow technique is a generic
+
+technique:
+ can be used to model the working of any
+
+system
+
+
+not just software systems.
+
+ A major advantage of the data flow
+
+technique is its simplicity.
+
+DATA FLOW MODEL OF A CAR ASSEMBLY UNIT
+Engine Store
+
+Door Store
+
+Chassis with Engine
+
+Fit
+Engine
+
+Chassis Store
+
+Partly Assembled Car
+
+Fit
+Doors
+
+Fit
+Wheels
+
+Wheel Store
+
+Assembled Car
+
+Paint and
+Test
+
+Car
+
+OBJECT-ORIENTED DESIGN (80S)
+ Object-oriented technique:
+
+ an intuitively appealing design
+
+approach:
+ natural objects (such as employees,
+pay-roll-register, etc.) occurring in a
+problem are first identified.
+
+OBJECT-ORIENTED DESIGN (80S)
+ Relationships among objects:
+ such as composition, reference, and
+
+inheritance are determined.
+ Each object essentially acts as
+ a data hiding (or data abstraction) entity.
+
+OBJECT-ORIENTED DESIGN (80S)
+ Object-Oriented Techniques have gained
+
+wide acceptance:
+
+ Simplicity
+ Reuse possibilities
+ Lower development time and cost
+ More robust code
+ Easy maintenance
+
+Lecture 2 Part 3
+
+Evolution of Design Techniques
+
+EVOLUTION OF DESIGN TECHNIQUES
+Object-Oriented
+Data flow-based
+
+Data structure-based
+
+Control flow-based
+
+Ad hoc
+
+EVOLUTION OF OTHER SOFTWARE ENGINEERING
+TECHNIQUES
+ The improvements to the software
+
+design methodologies
+ are indeed very conspicuous.
+ In additions to the software design
+
+techniques:
+ several other techniques evolved.
+
+EVOLUTION OF OTHER SOFTWARE ENGINEERING
+TECHNIQUES
+ life cycle models,
+ specification techniques,
+ project management techniques,
+ testing techniques,
+ debugging techniques,
+ quality assurance techniques,
+ software measurement techniques,
+ CASE tools, etc.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES
+ Use of Life Cycle Models
+ Software is developed through
+
+several well-defined stages:
+ requirements analysis and
+
+specification,
+ design,
+ coding,
+ testing, etc.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND MODERN
+SOFTWARE DEVELOPMENT PRACTICES
+ Emphasis has shifted
+
+
+
+from error correction to error
+prevention.
+
+ Modern practices emphasize:
+ detection of errors as close to their
+
+point of introduction as possible.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND MODERN
+SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ In exploratory style,
+ errors are detected only during testing,
+
+ Now,
+
+
+focus is on detecting as many errors as
+possible in each phase of development.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND MODERN
+SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ In exploratory style,
+ coding is synonymous with program development.
+ Now,
+ coding is considered only a small part of program
+
+development effort.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ A lot of effort and attention is now being
+
+paid to:
+ requirements specification.
+
+ Also, now there is a distinct design phase:
+ standard design techniques are being used.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ During all stages of
+
+development
+
+process:
+ Periodic reviews are being carried out
+
+ Software testing has become
+
+systematic:
+ standard testing techniques are available.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ There is better visibility of design and code:
+ visibility means production of good quality,
+
+consistent and standard documents.
+ In the past, very little attention was being given
+to producing good quality and consistent
+documents.
+ We will see later that increased visibility makes
+software project management easier.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ Because of good documentation:
+ fault diagnosis and maintenance are smoother
+
+now.
+ Several metrics are being used:
+ help in software project management, quality
+
+assurance, etc.
+
+DIFFERENCES BETWEEN THE EXPLORATORY STYLE AND
+MODERN SOFTWARE DEVELOPMENT PRACTICES (CONT.)
+ Projects are being thoroughly planned:
+ estimation,
+ scheduling,
+ monitoring mechanisms.
+
+ Use of CASE tools.
+
+SOFTWARE LIFE CYCLE
+ Software life cycle (or software process):
+ series of identifiable stages that a software
+
+product undergoes during its life time:
+
+Feasibility study
+requirements analysis and specification,
+design,
+coding,
+testing
+maintenance.
+
+
+LIFE CYCLE MODEL
+ A software life cycle model (or
+
+process
+
+model):
+ a descriptive and diagrammatic model of
+
+software life cycle:
+ identifies all the activities required for product
+development,
+ establishes a precedence ordering among the
+different activities,
+ Divides life cycle into phases.
+
+LIFE CYCLE MODEL (CONT.)
+ Several different activities may be carried
+
+out in each life cycle phase.
+ For example, the design stage might consist of:
+
+structured analysis activity followed
+by
+structured design activity.
+
+
+WHY MODEL LIFE CYCLE ?
+ A written description:
+
+ forms a common understanding of
+
+activities among the software
+developers.
+ helps in identifying inconsistencies,
+redundancies, and omissions in the
+development process.
+ Helps in tailoring a process model for
+specific projects.
+
+WHY MODEL LIFE CYCLE ?
+ Processes are tailored for special
+
+projects.
+ A documented process model
+
+helps to identify where the
+tailoring is to occur.
+
+
+
+LIFE CYCLE MODEL (CONT.)
+ The development team must
+
+identify a suitable life cycle model:
+ and then adhere to it.
+ Primary advantage of adhering to a life
+
+cycle model:
+
+
+helps development of software in a
+systematic and disciplined manner.
+
+LIFE CYCLE MODEL (CONT.)
+ When a program is developed by a single
+
+programmer -- he has the freedom to decide his exact steps.
+
+LIFE CYCLE MODEL (CONT.)
+ When a software product is being developed
+
+by a team:
+ there must be a precise understanding among
+
+team members as to when to do what,
+ otherwise it would lead to chaos and project
+failure.
+
+LIFE CYCLE MODEL (CONT.)
+
+
+A software project will never succeed
+if:
+ one engineer starts writing code,
+ another concentrates on writing the test
+
+document first,
+ yet another engineer first defines the file
+structure
+ another defines the I/O for his portion first.
+
+LIFE CYCLE MODEL (CONT.)
+ A life cycle model:
+ defines entry and exit criteria for every
+
+phase.
+ A phase is considered to be complete:
+
+
+only when all its exit criteria are satisfied.
+
+LIFE CYCLE MODEL (CONT.)
+ The phase exit criteria for the software
+
+requirements specification phase:
+ Software Requirements Specification (SRS)
+
+document is complete, reviewed, and approved by
+the customer.
+ A phase can start:
+ only if its phase-entry criteria have been satisfied.
+
+LIFE CYCLE MODEL (CONT.)
+ It becomes easier for software project
+
+managers:
+ to monitor the progress of the project.
+
+LIFE CYCLE MODEL (CONT.)
+ When a life cycle model is adhered to,
+ the project manager can at any time fairly
+
+accurately tell,
+
+
+at which stage (e.g., design, code, test, etc. ) of
+the project is.
+
+ Otherwise, it becomes very difficult to
+
+track the progress of the project
+
+
+the project manager would have to depend on
+the guesses of the team members.
+
+LIFE CYCLE MODEL (CONT.)
+ This usually leads to a problem:
+ known as the 99% complete syndrome.
+
+LIFE CYCLE MODEL (CONT.)
+ Many life cycle models have been
+
+proposed.
+
+ We will confine our attention to a few important
+
+and commonly used models.
+ classical waterfall model
+ iterative model,
+
+
+V-Shaped Model
+
+ spiral model
+ Big Bang Model
+ Agile Model
+
+SUMMARY
+ Software engineering is:
+ systematic collection of decades of
+
+programming experience
+ together with the innovations made by
+researchers.
+
+SUMMARY
+ A fundamental necessity while
+
+developing any large software product:
+ adoption of a life cycle model.
+
+SUMMARY
+ Adherence to a software life cycle
+
+model:
+ helps to do various development activities
+
+in a systematic and disciplined manner.
+ also makes it easier to manage a software
+development effort.
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+Lecture 3 Part 1
+
+The software process
+
+THE SOFTWARE PROCESS
+ Software process: a structured set of activities required to
+
+develop a software system.
+ Many different software processes but all involve:
+Specification – defining what the system should do;
+▪ Design and implementation – defining the organization of the
+system and implementing the system;
+▪ Validation – checking that it does what the customer wants;
+▪ Evolution – changing the system in response to changing
+customer needs.
+▪
+
+ A software process model is an abstract representation of
+
+a process. It presents a description of a process from
+some particular perspective.
+
+SOFTWARE PROCESS DESCRIPTIONS
+ When we describe and discuss processes, we usually
+
+talk about the activities in these processes such as
+specifying a data model, designing a user interface, etc.
+and the ordering of these activities.
+ Process descriptions may also include:
+▪
+
+Products, which are the outcomes of a process activity;
+▪ Roles, which reflect the responsibilities of the people involved
+in the process;
+▪ Pre- and post-conditions, which are statements that are true
+before and after a process activity has been enacted or a
+product produced.
+
+PLAN-DRIVEN AND AGILE PROCESSES
+ Plan-driven processes are processes where all of
+
+the process activities are planned in advance and
+progress is measured against this plan.
+ In agile processes, planning is incremental and it is
+easier to change the process to reflect changing
+customer requirements.
+ In practice, most practical processes include
+elements of both plan-driven and agile approaches.
+ There are no right or wrong software processes.
+
+SOFTWARE PROCESS MODELS
+1
+▪
+
+2
+▪
+
+3
+▪
+
+The waterfall model
+Plan-driven model. Separate and distinct phases of
+specification and development.
+
+Incremental (exploratory) development
+Specification, development and validation are interleaved.
+May be plan-driven or agile.
+
+Reuse-oriented software engineering
+The system is assembled from existing components. May
+be plan-driven or agile.
+
+ In practice, most large systems are developed using a
+
+process that incorporates elements from these models.
+
+1
+
+THE WATERFALL MODEL
+
+WATERFALL MODEL PHASES
+ There are separate identified phases in the waterfall
+
+model:
+▪
+
+Requirements analysis and definition
+▪ System and software design
+▪ Implementation and unit testing
+▪ Integration and system testing
+▪ Operation and maintenance
+ The main drawback of the waterfall model is the
+
+difficulty of accommodating change after the process is
+underway. In principle, a phase has to be complete
+before moving onto the next phase.
+
+WATERFALL MODEL PROBLEMS
+ Inflexible partitioning of the project into distinct stages
+
+makes it difficult to respond to changing customer
+requirements.
+▪
+
+Therefore, this model is only appropriate when the
+requirements are well-understood and changes will be fairly
+limited during the design process.
+▪ Few business systems have stable requirements.
+ The waterfall model is mostly used for large systems
+
+engineering projects where a system is developed at
+several sites.
+▪
+
+In those circumstances, the plan-driven nature of the waterfall
+model helps coordinate the work.
+
+2 INCREMENTAL (EXPLORATORY) DEVELOPMENT
+
+INCREMENTAL DEVELOPMENT BENEFITS
+ The cost of accommodating changing customer
+
+requirements is reduced.
+▪
+
+The amount of analysis and documentation that has to be
+redone is much less than is required with the waterfall model.
+
+ It is easier to get customer feedback on the development
+
+work that has been done.
+▪
+
+Customers can comment on demonstrations of the software
+and see how much has been implemented.
+
+ More rapid delivery and deployment of useful software to
+
+the customer is possible.
+▪
+
+Customers are able to use and gain value from the software
+earlier than is possible with a waterfall process.
+
+INCREMENTAL DEVELOPMENT PROBLEMS
+ The process is not visible.
+▪
+
+Managers need regular deliverables to measure progress. If
+systems are developed quickly, it is not cost-effective to
+produce documents that reflect every version of the system.
+
+ System structure tends to degrade as new increments
+
+are added.
+▪
+
+Unless time and money is spent on refactoring to improve the
+software, regular change tends to corrupt its structure.
+Incorporating further software changes becomes increasingly
+difficult and costly.
+
+Lecture 3 Part 2
+
+The software process Model
+
+3 REUSE-ORIENTED SOFTWARE ENGINEERING
+ Based on systematic reuse where systems are
+
+integrated from existing components or COTS
+(Commercial-off-the-shelf) systems.
+ Process stages
+▪
+
+Component analysis;
+▪ Requirements modification;
+▪ System design with reuse;
+▪ Development and integration.
+ Reuse is now the standard approach for building many
+
+types of business system
+▪
+
+Reuse covered in more depth later
+
+REUSE-ORIENTED SOFTWARE ENGINEERING
+
+KEY FACTORS THAT YOU SHOULD CONSIDER
+FOR THE REUSE DEVELOPMENT MODEL:
+ The development schedule for the software:
+
+ The expected lifetime:
+ The skills of the development team and
+
+experience:
+ The non-functional requirements:
+ The platform:
+
+ADVANTAGES OF REUSE-ORIENTED MODEL OF SOFTWARE DEVELOPMENT
+ Reduce the total cost of software development
+ Reduce the risk factor
+ Save the time and energy
+ Efficiency is high
+
+DISADVANTAGES OF REUSE-ORIENTED MODEL OF SOFTWARE DEVELOPMENT
+Does not fulfill the requirements of the user every time.
+• The reuse-oriented model is not constantly worked as a
+practice in its true form.
+• The old component, will not compatible with the newer
+version of the component
+• Difficulty of finding, understanding, and adapting
+reusable components.
+• Increased maintenance costs.
+• Very less tool support.
+•
+
+4
+
+INCREMENTAL DELIVERY
+
+ Rather than deliver the system as a single delivery, the
+
+development and delivery is broken down into
+increments with each increment delivering part of the
+required functionality.
+ User requirements are prioritised and the highest
+priority requirements are included in early increments.
+ Once the development of an increment is started, the
+requirements are frozen though requirements for later
+increments can continue to evolve.
+
+INCREMENTAL DELIVERY
+ Incremental development
+▪
+
+Develop the system in increments and evaluate each
+increment before proceeding to the development of the next
+increment;
+▪ Normal approach used in agile methods;
+▪ Evaluation done by user/customer proxy.
+ Incremental delivery
+▪
+
+Deploy an increment for use by end-users;
+▪ More realistic evaluation about practical use of software;
+▪ Difficult to implement for replacement systems as increments
+have less functionality than the system being replaced.
+
+INCREMENTAL DELIVERY
+
+INCREMENTAL DELIVERY ADVANTAGES
+ Customer value can be delivered with each increment
+
+so system functionality is available earlier.
+ Early increments act as a prototype to help elicit
+requirements for later increments.
+ Lower risk of overall project failure.
+ The highest priority system services tend to receive
+the most testing.
+
+INCREMENTAL DELIVERY PROBLEMS
+ Most systems require a set of basic facilities that are
+
+used by different parts of the system.
+▪
+
+As requirements are not defined in detail until an increment is
+to be implemented, it can be hard to identify common facilities
+that are needed by all increments.
+
+ The essence of iterative processes is that the
+
+specification is developed in conjunction with the
+software.
+▪
+
+However, this conflicts with the procurement model of many
+organizations, where the complete system specification is part
+of the system development contract.
+
+5
+
+BOEHM’S SPIRAL MODEL
+
+ Process is represented as a spiral rather than as a
+
+sequence of activities with backtracking.
+ Each loop in the spiral represents a phase in the
+process.
+ No fixed phases such as specification or design - loops
+in the spiral are chosen depending on what is required.
+ Risks are explicitly assessed and resolved throughout
+the process.
+
+BOEHM’S SPIRAL MODEL OF THE SOFTWARE
+PROCESS
+
+SPIRAL MODEL SECTORS
+ Objective setting
+
+▪
+
+Specific objectives for the phase are identified.
+
+ Risk assessment and reduction
+▪
+
+Risks are assessed and activities put in place to reduce the
+key risks.
+
+ Development and validation
+▪
+
+A development model for the system is chosen which can be
+any of the generic models.
+
+ Planning
+▪
+
+The project is reviewed and the next phase of the spiral is
+planned.
+
+SPIRAL MODEL USAGE
+ Spiral model has been very influential in helping
+
+people think about iteration in software processes
+and introducing the risk-driven approach to
+development.
+ In practice, however, the model is rarely used as
+published for practical software development.
+
+ADVANTAGES OF SPIRAL MODEL:
+1. Risk Handling: The projects with many unknown risks that
+
+occur as the development proceeds, in that case, Spiral Model
+is the best development model to follow due to the risk
+analysis and risk handling at every phase.
+2. Good for large projects: It is recommended to use the Spiral
+Model in large and complex projects.
+3. Flexibility in Requirements: Change requests in the
+Requirements at later phase can be incorporated accurately
+by using this model.
+4. Customer Satisfaction: Customer can see the development of
+the product at the early phase of the software development
+and thus, they habituated with the system by using it before
+completion of the total product.
+
+DISADVANTAGES OF SPIRAL MODEL:
+1. Complex: The Spiral Model is much more complex than other
+
+SDLC models.
+2. Expensive: Spiral Model is not suitable for small projects as it
+is expensive.
+3. Too much dependability on Risk Analysis: The successful
+completion of the project is very much dependent on Risk
+Analysis. Without very highly experienced experts, it is going
+to be a failure to develop a project using this model.
+4. Difficulty in time management: As the number of phases is
+unknown at the start of the project, so time estimation is very
+difficult.
+
+Lecture 3 Part 3
+
+Process activities
+
+PROCESS ACTIVITIES
+ Real software processes are inter-leaved sequences
+
+of technical, collaborative and managerial activities
+with the overall goal of specifying, designing,
+implementing and testing a software system.
+ The four basic process activities of specification,
+development, validation and evolution are organized
+differently in different development processes. In the
+waterfall model, they are organized in sequence,
+whereas in incremental development they are interleaved.
+
+SOFTWARE SPECIFICATION
+ The process of establishing what services are required
+
+and the constraints on the system’s operation and
+development.
+ Requirements engineering process
+▪
+
+Feasibility study
+
+
+▪
+
+Requirements elicitation and analysis
+
+
+▪
+
+What do the system stakeholders require or expect from the
+system?
+
+Requirements specification
+
+
+▪
+
+Is it technically and financially feasible to build the system?
+
+Defining the requirements in detail
+
+Requirements validation
+
+
+Checking the validity of the requirements
+
+THE REQUIREMENTS ENGINEERING PROCESS
+
+SOFTWARE DESIGN AND IMPLEMENTATION
+ The process of converting the system specification into
+
+an executable system. Design is about how to build a
+system.
+ Software design
+▪
+
+Design a software structure that realises the specification;
+
+ Implementation
+
+▪
+
+Translate this structure into an executable program;
+
+ The activities of design and implementation are closely
+
+related and may be inter-leaved.
+
+A GENERAL MODEL OF THE DESIGN PROCESS
+
+DESIGN ACTIVITIES
+ Architectural design, where you identify the overall
+
+structure of the system, the principal components
+(sometimes called sub-systems or modules), their
+relationships and how they are distributed.
+ Interface design, where you define the interfaces
+between system components.
+ Component design, where you take each system
+component and design how it will operate.
+ Database design, where you design the system data
+structures and how these are to be represented in a
+database.
+
+SOFTWARE VALIDATION
+ Verification and validation (V & V) is intended to show
+
+that a system conforms to its specification and meets the
+requirements of the system customer.
+ Involves checking and review processes and system
+testing.
+ System testing involves executing the system with test
+cases that are derived from the specification of the real
+data to be processed by the system.
+ Testing is the most commonly used V & V activity.
+
+STAGES OF TESTING
+
+Mangal Sain,
+Dongseo University, Korea
+
+TESTING STAGES
+ Development or component testing
+▪
+
+Individual components are tested independently;
+▪ Components may be functions or objects or coherent
+groupings of these entities.
+ System testing
+▪
+
+Testing of the system as a whole. Testing of emergent
+properties is particularly important.
+
+ Acceptance testing
+▪
+
+Testing with customer data to check that the system meets
+the customer’s needs.
+
+TESTING PHASES IN A PLAN-DRIVEN SOFTWARE PROCESS
+
+SOFTWARE EVOLUTION
+ Software is inherently flexible and can change.
+ As requirements change through changing business
+
+circumstances, the software that supports the business
+must also evolve and change.
+ Although there has been a demarcation between
+development and evolution (maintenance) this is
+increasingly irrelevant as fewer and fewer systems are
+completely new.
+
+SYSTEM EVOLUTION
+
+COPING WITH CHANGE
+ Change is inevitable in all large software projects.
+▪
+
+Business changes lead to new and changed system
+requirements
+▪ New technologies open up new possibilities for improving
+implementations
+▪ Changing platforms require application changes
+ Change leads to rework so the costs of change include
+
+both rework (e.g. re-analysing requirements) as well as
+the costs of implementing new functionality
+
+Mangal Sain,
+Dongseo University, Korea
+
+REDUCING THE COSTS OF REWORK
+ Change avoidance, where the software process includes
+
+activities that can anticipate possible changes before
+significant rework is required.
+▪
+
+For example, a prototype system may be developed to show
+some key features of the system to customers.
+
+ Change tolerance, where the process is designed so that
+
+changes can be accommodated at relatively low cost.
+▪
+
+This normally involves some form of incremental development.
+Proposed changes may be implemented in increments that
+have not yet been developed. If this is impossible, then only a
+single increment (a small part of the system) may have be
+altered to incorporate the change.
+
+SOFTWARE PROTOTYPING
+ A prototype is an initial version of a system used to
+
+demonstrate concepts and try out design options.
+ A prototype can be used in:
+▪
+
+The requirements engineering process to help with
+requirements elicitation and validation;
+▪ In design processes to explore options and develop a UI
+design;
+▪ In the testing process to run back-to-back tests.
+
+BENEFITS OF PROTOTYPING
+ Improved system usability.
+
+ A closer match to users’ real needs.
+ Improved design quality.
+ Improved maintainability.
+ Reduced development effort.
+
+THE PROCESS OF PROTOTYPE DEVELOPMENT
+
+PROTOTYPE DEVELOPMENT
+ May be based on rapid prototyping languages or tools
+ May involve leaving out functionality
+▪
+
+Prototype should focus on areas of the product that are not
+well-understood;
+▪ Error checking and recovery may not be included in the
+prototype;
+▪ Focus on functional rather than non-functional requirements
+such as reliability and security
+
+THROW-AWAY PROTOTYPES
+ Prototypes should be discarded after development as
+
+they are not a good basis for a production system:
+▪
+
+It may be impossible to tune the system to meet nonfunctional requirements;
+▪ Prototypes are normally undocumented;
+▪ The prototype structure is usually degraded through rapid
+change;
+▪ The prototype probably will not meet normal organisational
+quality standards.
+
+KEY POINTS
+ Software processes are the activities involved in
+
+producing a software system. Software process models
+are abstract representations of these processes.
+ General process models describe the organization of
+software processes. Examples of these general models
+include the ‘waterfall’ model, incremental (exploratory)
+development, reuse-oriented development, incremental
+delivery, Boehm’s spiral model, and RUP.
+
+KEY POINTS
+ Requirements engineering is the process of developing
+
+a software specification.
+ Design and implementation processes are concerned
+with transforming a requirements specification into an
+executable software system.
+ Software validation is the process of checking that the
+system conforms to its specification and that it meets
+the real needs of the users of the system.
+ Software evolution takes place when you change
+existing software systems to meet new requirements.
+The software must evolve to remain useful.
+
+KEY POINTS
+ Processes should include activities to cope with change.
+
+This may involve a prototyping phase that helps avoid
+poor decisions on requirements and design.
+ Processes may be structured for iterative development
+and delivery so that changes may be made without
+disrupting the system as a whole.
+ The Rational Unified Process is a modern generic
+process model that is organized into phases (inception,
+elaboration, construction and transition) but separates
+activities (requirements, analysis and design, etc.) from
+these phases.
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+TOPICS COVERED
+ Agile methods
+ Plan-driven and agile development
+
+ Extreme programming (XP)
+ Scrum
+ Scaling up agile methods
+
+2
+
+Lecture 4 Part 1
+
+Agile methods
+
+AGILE SOFTWARE - DEFINITION
+Agile software development is various approaches
+to software development under which requirements and
+solutions evolve through the collaborative effort of selforganizing and cross-functional teams and
+their customer(s)/end user(s). It advocates adaptive
+planning, evolutionary development, early delivery,
+and continual improvement, and it encourages rapid and
+flexible response to change. - Wiki
+
+4
+
+RAPID SOFTWARE DEVELOPMENT
+ Rapid development and delivery is now often the
+
+most important requirement for software systems
+▪ Businesses operate in a fast–changing environment
+▪ Software has to evolve quickly to reflect changing
+
+business needs
+ Rapid software development
+▪ Specification, design and implementation are inter-leaved
+▪ System is developed as a series of versions with
+
+stakeholders involved in version evaluation
+▪ User interfaces are often developed using an IDE and
+graphical toolset
+5
+
+AGILE METHODS
+ Dissatisfaction with the overheads involved in software
+
+design methods of the 1980s and 1990s led to the
+creation of agile methods. These methods:
+▪
+
+Focus on the code rather than the design
+▪ Are based on an iterative approach to software development
+▪ Are intended to deliver working software quickly and evolve
+this quickly to meet changing requirements
+ The aim of agile methods is to reduce overheads in the
+
+software process (e.g. by limiting documentation) and to
+be able to respond quickly to changing requirements
+without excessive rework
+6
+
+AGILE MANIFESTO
+ “We are uncovering better ways of developing software by
+
+doing it and helping others do it. Through this work we
+have come to value:
+▪
+
+Individuals and interactions over processes and tools;
+Working software over comprehensive documentation;
+Customer collaboration over contract negotiation;
+Responding to change over following a plan;
+
+ That is, while there is value in the items on the right, we
+
+value the items on the left more.”
+
+7
+
+CORE VALUES OF AGILE MANIFESTO
+ Individuals and interactions over processes and
+
+tools
+ Working software over comprehensive
+documentation
+ Customer collaboration over contract negotiation
+ Responding to change over following a plan
+
+PRINCIPLES OF THE AGILE MANIFESTO
+ Highest priority is to satisfy the customer through early
+
+and continuous delivery of valuable software.
+ Welcome changing requirements, even late in
+development.
+ Deliver working software frequently, from a couple of
+weeks to a couple of months, with a preference to the
+shorter timescale.
+ Businesspeople and developers must work together daily
+throughout the project.
+ Build projects around motivated individuals. Give them
+the environment and support they need, and trust them to
+get the job done.
+
+PRINCIPLES OF THE AGILE MANIFESTO CONTD.
+ The most efficient and effective method of conveying
+
+information to and within a development team is face-toface conversation.
+ Working software is the primary measure of progress.
+ Agile processes promote sustainable development.
+ Continuous attention to technical excellence and good
+design enhances agility.
+ Simplicity–the art of maximizing the amount of work not
+done–is essential.
+ The best architectures, requirements, and designs emerge
+from self-organizing teams.
+ At regular intervals, the team reflects on how to become
+more effective, then tunes and adjusts its behavior
+accordingly.
+
+THE PRINCIPLES OF AGILE METHODS
+Principle
+
+Description
+
+Customer involvement
+
+Customers should be involved throughout the development process.
+Their role is provide and prioritize new system requirements and to
+evaluate the iterations of the system.
+
+Incremental delivery
+
+People not process
+
+Embrace change
+
+Maintain simplicity
+
+The software is developed in increments with the customer specifying
+the requirements to be included in each increment.
+The skills of the development team should be recognized and exploited.
+Team members should be left to develop their own ways of working
+without prescriptive processes.
+Expect the system requirements to change and so design the system to
+accommodate these changes.
+Focus on simplicity in both the software being developed and in the
+development process. Wherever possible, 11
+actively work to eliminate
+complexity from the system.
+
+BENEFITS OF AGILE METHODOLOGY
+The benefits of Agile are tied directly to its faster, lighter,
+more engaged mindset. The process, in a nutshell,
+delivers what the customer wants, when the customer
+wants it. comprehensive list of benefits is below.
+ Faster.
+ Increased customer satisfaction.
+ Values employees.
+ Eliminates rework.
+
+AGILE METHOD APPLICABILITY
+ Product development where a software company is
+
+developing a small or medium-sized product for sale
+ Custom system development within an organization,
+where there is a clear commitment from the customer to
+become involved in the development process and where
+there are not a lot of external rules and regulations that
+affect the software
+ Because of their focus on small, tightly-integrated teams,
+there are problems in scaling agile methods to large
+systems
+
+13
+
+PROBLEMS WITH AGILE METHODS
+ It can be difficult to keep the interest of customers who
+
+are involved in the process
+ Team members may be unsuited to the intense
+involvement that characterizes agile methods
+ Prioritizing changes can be difficult where there are
+multiple stakeholders
+ Maintaining simplicity requires extra work
+ Contracts may be a problem as with other approaches
+to iterative development
+
+14
+
+AGILE METHODS AND SOFTWARE MAINTENANCE
+ Most organizations spend more on maintaining existing
+
+software than they do on new software development. So, if
+agile methods are to be successful, they have to support
+maintenance as well as original development
+ Two key issues:
+▪
+
+Are systems that are developed using an agile approach
+maintainable, given the emphasis in the development process of
+minimizing formal documentation?
+▪ Can agile methods be used effectively for evolving a system in
+response to customer change requests?
+ Problems may arise if original development team cannot
+
+be maintained.
+15
+
+Lecture 4 Part 2
+
+Plan-driven and agile development and
+Extreme Programming
+
+PLAN-DRIVEN AND AGILE DEVELOPMENT
+ Plan-driven development
+
+▪
+
+A plan-driven approach to software engineering is based
+around separate development stages with the outputs to be
+produced at each of these stages planned in advance
+▪ Not necessarily waterfall model – plan-driven, incremental
+development is also possible
+▪ Iteration occurs within activities
+ Agile development
+
+▪
+
+Specification, design, implementation and testing are interleaved and the outputs from the development process are
+decided through a process of negotiation during the software
+development process
+17
+
+PLAN-DRIVEN AND AGILE SPECIFICATION
+separate
+developmen
+t stages with
+the outputs
+to be
+produced at
+each of
+these stages
+planned in
+advance.
+
+separate
+development
+stages with
+the outputs to
+be produced
+at each of
+these stages
+planned in
+advance.
+
+18
+
+TECHNICAL, HUMAN, ORGANIZATIONAL ISSUES
+ Most projects include elements of plan-driven and agile
+
+processes. Deciding on the balance depends on:
+▪
+
+Is it important to have a very detailed specification and design
+before moving to implementation? If so, you probably need to
+use a plan-driven approach
+▪ Is an incremental delivery strategy, where you deliver the
+software to customers and get rapid feedback from them,
+realistic? If so, consider using agile methods.
+▪ How large is the system that is being developed? Agile
+methods are most effective when the system can be
+developed with a small co-located team who can communicate
+informally. This may not be possible for large systems that
+require larger development teams so a plan-driven approach
+may have to be used.
+20
+
+TECHNICAL, HUMAN, ORGANIZATIONAL ISSUES
+▪
+
+What type of system is being developed?
+ Plan-driven approaches may be required for systems that require
+a lot of analysis before implementation (e.g. real-time system with
+complex timing requirements)
+▪ What is the expected system lifetime?
+ Long-lifetime systems may require more design documentation to
+communicate the original intentions of the system developers to
+the support team
+▪ What technologies are available to support system development?
+ Agile methods rely on good tools to keep track of an evolving
+design
+▪ How is the development team organized?
+ If the development team is distributed or if part of the development
+is being outsourced, then you may need to develop design
+documents to communicate across the development teams 21
+
+TECHNICAL, HUMAN, ORGANIZATIONAL ISSUES
+▪
+
+Are there cultural or organizational issues that may affect the
+system development?
+ Traditional engineering organizations have a culture of planbased development, as this is the norm in engineering
+▪ How good are the designers and programmers in the
+development team?
+ It is sometimes argued that agile methods require higher
+skill levels than plan-based approaches in which
+programmers simply translate a detailed design into code
+▪ Is the system subject to external regulation?
+ If a system has to be approved by an external regulator (e.g.
+the FAA approve software that is critical to the operation of
+an aircraft) then you will probably be required to produce
+detailed documentation as part of the system safety case22
+
+EXTREME PROGRAMMING
+ Perhaps the best-known and most widely used
+
+agile method.
+ Extreme Programming (XP) takes an “extreme”
+approach to iterative development
+▪
+
+New versions may be built several times per day;
+▪ Increments are delivered to customers every 2 weeks;
+▪ All tests must be run for every build and the build is only
+accepted if tests run successfully
+
+23
+
+THE EXTREME PROGRAMMING RELEASE CYCLE
+
+24
+
+EXTREME PROGRAMMING PRACTICES (A)
+Principle or practice
+Incremental planning
+
+Small releases
+Simple design
+
+Test-first development
+Refactoring
+
+Description
+Requirements are recorded on story cards and the stories to be
+included in a release are determined by the time available and their
+relative priority. The developers break these stories into development
+‘Tasks’.
+
+The minimal useful set of functionality that provides business value is
+developed first. Releases of the system are frequent and incrementally
+add functionality to the first release.
+Enough design is carried out to meet the current requirements and no
+more.
+An automated unit test framework is used to write tests for a new piece
+of functionality before that functionality itself is implemented.
+All developers are expected to refactor the25code continuously as soon
+as possible code improvements are found. This keeps the code simple
+and maintainable.
+
+EXTREME PROGRAMMING PRACTICES (B)
+Pair programming
+
+Developers work in pairs, checking each other’s work and providing
+the support to always do a good job.
+
+Collective ownership
+
+The pairs of developers work on all areas of the system, so that no
+islands of expertise develop and all the developers take responsibility
+for all of the code. Anyone can change anything.
+
+Continuous integration
+
+As soon as the work on a task is complete, it is integrated into the
+whole system. After any such integration, all the unit tests in the
+system must pass.
+
+Sustainable pace
+
+Large amounts of overtime are not considered acceptable as the net
+effect is often to reduce code quality and medium term productivity
+
+On-site customer
+
+A representative of the end-user of the system (the customer) should
+be available full time for the use of the XP team. In an extreme
+programming process, the customer is a member of the development
+26
+team and is responsible for bringing system requirements to the team
+for implementation.
+
+XP AND AGILE PRINCIPLES
+ Incremental development is supported through
+
+small, frequent system releases
+ Customer involvement means full-time customer
+engagement with the team
+ People not process through pair programming,
+collective ownership and a process that avoids long
+working hours.
+ Change supported through regular system releases
+ Maintaining simplicity through constant refactoring
+of code
+
+27
+
+REQUIREMENTS SCENARIOS
+ In XP, a customer or user is part of the XP team and
+
+is responsible for making decisions on requirements.
+ User requirements are expressed as scenarios or
+user stories.
+ These are written on cards and the development team
+break them down into implementation tasks. These
+tasks are the basis of schedule and cost estimates.
+ The customer chooses the stories for inclusion in the
+next release based on their priorities and the
+schedule estimates.
+
+28
+
+A ‘PRESCRIBING MEDICATION’ STORY
+
+29
+
+EXAMPLES OF TASK CARDS FOR PRESCRIBING MEDICATION
+
+30
+
+XP AND CHANGE
+ Conventional wisdom in software engineering is to design
+
+for change. It is worth spending time and effort
+anticipating changes as this reduces costs later in the life
+cycle.
+ XP, however, maintains that this is not worthwhile as
+changes cannot be reliably anticipated
+ Rather, it proposes constant code improvement
+(refactoring) to make changes easier when they have to
+be implemented
+
+31
+
+REFACTORING
+ Programming team look for possible software
+
+improvements and make these improvements even
+where there is no immediate need for them
+ This improves the understandability of the software and
+so reduces the need for documentation
+ Changes are easier to make because the code is wellstructured and clear
+ However, some changes requires architecture refactoring
+and this is much more expensive.
+
+32
+
+EXAMPLES OF REFACTORING
+ Re-organization of a class hierarchy to remove
+
+duplicate code
+ Tidying up and renaming attributes and methods to
+make them easier to understand
+ The replacement of inline code with calls to
+methods that have been included in a program
+library
+
+33
+
+Lecture 4 Part 3
+
+Testing in XP and SCRUM
+
+TESTING IN XP
+ Testing is central to XP and XP has developed an approach
+
+where the program is tested after every change has been made.
+ XP testing features:
+▪
+
+Test-first development
+▪ Incremental test development from scenarios
+▪ User involvement in test development and validation
+▪ Automated test harnesses are used to run all component tests each
+time that a new release is built
+
+35
+
+TEST-FIRST DEVELOPMENT
+ Writing tests before code clarifies the requirements to
+
+be implemented.
+ Tests are written as programs rather than data so that
+they can be executed automatically. The test includes a
+check that it has executed correctly.
+▪
+
+Usually relies on a testing framework such as Junit.
+
+ All previous and new tests are run automatically when
+
+new functionality is added, thus checking that the new
+functionality has not introduced errors
+
+36
+
+CUSTOMER INVOLVEMENT
+ The role of the customer in the testing process is to help
+
+develop acceptance tests for the stories that are to be
+implemented in the next release of the system.
+ The customer who is part of the team writes tests as
+development proceeds. All new code is therefore
+validated to ensure that it is what the customer needs.
+ However, people adopting the customer role have limited
+time available and so cannot work full-time with the
+development team. They may feel that providing the
+requirements was enough of a contribution and so may
+be reluctant to get involved in the testing process.
+37
+
+TEST CASE DESCRIPTION FOR DOSE CHECKING
+
+38
+
+XP TESTING DIFFICULTIES
+ Programmers prefer programming to testing and
+
+sometimes they take short cuts when writing tests. For
+example, they may write incomplete tests that do not check
+for all possible exceptions that may occur.
+ Some tests can be difficult to write incrementally. For
+example, in a complex user interface, it is often difficult to
+write unit tests for the code that implements the ‘display
+logic’ and workflow between screens.
+ It difficult to judge the completeness of a set of tests.
+Although you may have a lot of system tests, your test set
+may not provide complete coverage.
+39
+
+PAIR PROGRAMMING
+ In XP, programmers work in pairs, sitting together to
+
+develop code.
+ This helps develop common ownership of code and
+spreads knowledge across the team.
+ It serves as an informal review process as each line of
+code is looked at by more than 1 person.
+ It encourages refactoring as the whole team can benefit
+from this.
+ Measurements suggest that development productivity with
+pair programming is similar to that of two people working
+independently.
+40
+
+ADVANTAGES OF PAIR PROGRAMMING
+ It supports the idea of collective ownership and
+
+responsibility for the system
+▪
+
+Individuals are not held responsible for problems with the code.
+Instead, the team has collective responsibility for resolving these
+problems.
+
+ It acts as an informal review process because each line of
+
+code is looked at by at least two people
+ It helps support refactoring, which is a process of software
+improvement
+▪
+
+Where pair programming and collective ownership are used,
+others benefit immediately from the refactoring so they are likely
+to support the process
+41
+
+SCRUM
+ The Scrum approach is a general agile method but its
+
+focus is on managing iterative development rather than
+specific agile practices
+ There are three phases in Scrum:
+The initial phase is an outline planning phase where you
+establish the general objectives for the project and design the
+software architecture
+ This is followed by a series of sprint cycles, where each cycle
+develops an increment of the system
+ The project closure phase wraps up the project, completes
+required documentation such as system help frames and user
+manuals and assesses the lessons learned from the project
+
+
+42
+
+THE SCRUM PROCESS
+
+43
+
+THE SPRINT CYCLE
+ Sprints are fixed length, normally 2–4 weeks. They
+
+correspond to the development of a release of the
+system in XP.
+ The starting point for planning is the product backlog,
+which is the list of work to be done on the project.
+ The selection phase involves all of the project team who
+work with the customer to select the features and
+functionality to be developed during the sprint.
+
+44
+
+THE SPRINT CYCLE
+ Once these are agreed, the team organize themselves to
+
+develop the software. During this stage the team is
+isolated from the customer and the organization, with all
+communications channelled through the so-called Scrum
+master
+ The role of the Scrum master is to protect the
+development team from external distractions
+ At the end of the sprint, the work done is reviewed and
+presented to stakeholders. The next sprint cycle then
+begins.
+45
+
+TEAMWORK IN SCRUM
+ The ‘Scrum master’ is a facilitator who arranges daily
+
+meetings, tracks the backlog of work to be done, records
+decisions, measures progress against the backlog and
+communicates with customers and management outside
+of the team.
+ The whole team attends short daily meetings where all
+team members share information, describe their progress
+since the last meeting, problems that have arisen and
+what is planned for the following day.
+▪
+
+This means that everyone on the team knows what is going on
+and, if problems arise, can re-plan short-term work to cope with
+them.
+46
+
+SCRUM BENEFITS
+ The product is broken down into a set of manageable and
+
+understandable chunks
+ Unstable requirements do not hold up progress
+ The whole team have visibility of everything and
+consequently team communication is improved
+ Customers see on-time delivery of increments and gain
+feedback on how the product works
+ Trust between customers and developers is established
+and a positive culture is created in which everyone
+expects the project to succeed
+
+47
+
+SCALING AGILE METHODS
+ Agile methods have proved to be successful for small and
+
+medium sized projects that can be developed by a small
+co-located team
+ It is sometimes argued that the success of these methods
+comes because of improved communications which is
+possible when everyone is working together
+ Scaling up agile methods involves changing these to cope
+with larger, longer projects where there are multiple
+development teams, perhaps working in different locations.
+
+48
+
+LARGE SYSTEMS DEVELOPMENT
+ Large systems are usually collections of separate,
+
+communicating systems, where separate teams develop
+each system. Frequently, these teams are working in different
+places, sometimes in different time zones.
+ Large systems are ‘brownfield systems’, that is they include
+and interact with a number of existing systems. Many of the
+system requirements are concerned with this interaction and
+so don’t really lend themselves to flexibility and incremental
+development.
+ Where several systems are integrated to create a system, a
+significant fraction of the development is concerned with
+system configuration rather than original code development.
+49
+
+LARGE SYSTEM DEVELOPMENT
+ Large systems and their development processes are
+
+often constrained by external rules and regulations
+limiting the way that they can be developed.
+ Large systems have a long procurement and
+development time. It is difficult to maintain coherent teams
+who know about the system over that period as,
+inevitably, people move on to other jobs and projects.
+ Large systems usually have a diverse set of stakeholders.
+It is practically impossible to involve all of these different
+stakeholders in the development process.
+
+50
+
+SCALING OUT AND SCALING UP
+ ‘Scaling up’ is concerned with using agile methods for
+
+developing large software systems that cannot be
+developed by a small team
+ ‘Scaling out’ is concerned with how agile methods can
+be introduced across a large organization with many
+years of software development experience
+ When scaling agile methods it is essential to maintain
+agile fundamentals
+▪
+
+Flexible planning, frequent system releases, continuous
+integration, test-driven development and good team
+communications.
+
+51
+
+SCALING UP TO LARGE SYSTEMS
+ For large systems development, it is not possible to focus
+
+only on the code of the system. You need to do more upfront design and system documentation.
+ Cross-team communication mechanisms have to be
+designed and used. This should involve regular phone
+and video conferences between team members and
+frequent, short electronic meetings where teams update
+each other on progress.
+ Continuous integration, where the whole system is built
+every time any developer checks in a change, is
+practically impossible. However, it is essential to maintain
+frequent system builds and regular releases of the
+system.
+52
+
+SCALING OUT TO LARGE COMPANIES
+ Project managers who do not have experience of agile
+
+methods may be reluctant to accept the risk of a new
+approach.
+ Large organizations often have quality procedures and
+standards that all projects are expected to follow and,
+because of their bureaucratic nature, these are likely to be
+incompatible with agile methods.
+ Agile methods seem to work best when team members have
+a relatively high skill level. However, within large
+organizations, there are likely to be a wide range of skills and
+abilities.
+ There may be cultural resistance to agile methods, especially
+in those organizations that have a long history of using
+53
+conventional systems engineering processes.
+
+KEY POINTS
+ Agile methods are incremental development methods that focus
+
+on rapid development, frequent releases of the software, reducing
+process overheads and producing high-quality code. They involve
+the customer directly in the development process.
+ The decision on whether to use an agile or a plan-driven
+approach to development should depend on the type of software
+being developed, the capabilities of the development team, and
+the culture of the company developing the system.
+ Extreme programming is a well-known agile method that
+integrates a range of good programming practices such as
+frequent releases of the software, continuous software
+improvement and customer participation in the development
+team.
+54
+
+KEY POINTS
+ A particular strength of extreme programming is the
+
+development of automated tests before a program feature
+is created. All tests must successfully execute when an
+increment is integrated into a system.
+ The Scrum method is an agile method that provides a
+project management framework. It is centred round a set
+of sprints, which are fixed time periods when a system
+increment is developed.
+ Scaling agile methods for large systems is difficult. Large
+systems need up-front design and a lot of documentation.
+
+55
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+TOPICS COVERED
+ Functional and non-functional requirements
+ The software requirements specification document
+
+(SRS)
+ Requirement's specification
+ Requirements engineering processes
+ Requirement's elicitation and analysis
+ Requirement's validation
+ Requirements management
+
+2
+
+Lecture 5 Part 1
+
+Functional and non-functional requirements
+
+REQUIREMENTS ENGINEERING
+ The process of establishing the services that the
+
+customer requires from a system and the constraints
+under which it operates and is developed.
+ The requirements themselves are the descriptions of
+the system services and constraints that are
+generated during the requirements engineering
+process.
+
+4
+
+WHAT IS A REQUIREMENT?
+ It may range from a high-level abstract statement of
+
+a service or of a system constraint to a detailed
+mathematical functional specification.
+ This is inevitable as requirements may serve a dual
+function:
+▪
+
+May be the basis for a bid for a contract - therefore
+must be open to interpretation;
+▪ May be the basis for the contract itself - therefore
+must be defined in detail;
+
+5
+
+TYPES OF REQUIREMENT
+ User requirements
+▪ Statements in natural language plus diagrams of the
+
+services the system provides and its operational
+constraints. Written for customers.
+ System requirements
+▪ A structured document setting out detailed descriptions
+
+of the system’s functions, services and operational
+constraints. Defines what should be implemented so
+may be part of a contract between client and
+contractor.
+6
+
+USER AND SYSTEM REQUIREMENTS
+
+7
+
+READERS OF DIFFERENT TYPES OF REQUIREMENTS
+SPECIFICATION
+
+8
+
+FUNCTIONAL AND NON-FUNCTIONAL REQUIREMENTS
+ Functional requirements
+▪
+
+Statements of services the system should provide, how the
+system should react to particular inputs and how the system
+should behave in particular situations.
+▪ May state what the system should not do.
+ Non-functional requirements
+
+▪
+
+Constraints on the services or functions offered by the system
+such as timing constraints, constraints on the development
+process, standards, etc.
+▪ Often apply to the system as a whole rather than individual
+features or services.
+ Domain requirements
+▪
+
+Constraints on the system from the domain of operation
+9
+
+FUNCTIONAL REQUIREMENTS
+ Describe functionality or system services.
+ Depend on the type of software, expected users
+
+and the type of system where the software is used.
+ Functional user requirements may be high-level
+statements of what the system should do.
+ Functional system requirements should describe
+the system services in detail.
+
+10
+
+FUNCTIONAL REQUIREMENTS FOR THE MHC-PMS
+ A user shall be able to search the appointments
+
+lists for all clinics.
+ The system shall generate each day, for each clinic,
+a list of patients who are expected to attend
+appointments that day.
+ Each staff member using the system shall be
+uniquely identified by his or her 8-digit employee
+number.
+
+11
+Mangal Sain,
+Dongseo University, Korea
+
+REQUIREMENTS IMPRECISION
+ Problems arise when requirements are not
+
+precisely stated.
+ Ambiguous requirements may be interpreted in
+different ways by developers and users.
+ Consider the term ‘search’ in requirement 1
+User intention – search for a patient name across all
+appointments in all clinics;
+▪ Developer interpretation – search for a patient name in
+an individual clinic. User chooses clinic then search.
+▪
+
+12
+Mangal Sain,
+Dongseo University, Korea
+
+REQUIREMENTS COMPLETENESS AND CONSISTENCY
+ In principle, requirements should be both complete
+
+and consistent
+ Complete
+▪
+
+They should include descriptions of all facilities required
+
+ Consistent
+▪
+
+There should be no conflicts or contradictions in the
+descriptions of the system facilities
+
+ In practice, it is impossible to produce a complete
+
+and consistent requirements document
+
+13
+Mangal Sain,
+Dongseo University, Korea
+
+NON-FUNCTIONAL REQUIREMENTS
+ These define system properties and constraints e.g.
+
+reliability, response time, and storage requirements.
+Constraints are I/O device capability, system
+representations, etc.
+ Process requirements may also be specified
+mandating a particular IDE, programming language
+or development method.
+ Non-functional requirements may be more critical
+than functional requirements. If these are not met,
+the system may be useless.
+
+14
+Mangal Sain,
+Dongseo University, Korea
+
+TYPES OF NONFUNCTIONAL REQUIREMENT
+
+15
+Mangal Sain,
+Dongseo University, Korea
+
+NON-FUNCTIONAL REQUIREMENTS IMPLEMENTATION
+ Non-functional requirements may affect the overall
+
+architecture of a system rather than the individual
+components.
+▪
+
+For example, to ensure that performance requirements are
+met, you may have to organize the system to minimize
+communications between components.
+
+ A single non-functional requirement, such as a security
+
+requirement, may generate a number of related
+functional requirements that define system services that
+are required.
+▪
+
+It may also generate requirements that restrict existing
+requirements.
+16
+Mangal Sain,
+Dongseo University, Korea
+
+NON-FUNCTIONAL CLASSIFICATIONS
+ Product requirements
+▪
+
+Requirements which specify that the delivered product must
+behave in a particular way e.g. execution speed, reliability,
+etc.
+
+ Organizational requirements
+
+▪
+
+Requirements which are a consequence of organizational
+policies and procedures e.g. process standards used,
+implementation requirements, etc.
+
+ External requirements
+▪
+
+Requirements which arise from factors which are external to
+the system and its development process, e.g. interoperability
+requirements, legislative requirements, etc.
+17
+Mangal Sain,
+Dongseo University, Korea
+
+EXAMPLES OF NONFUNCTIONAL
+REQUIREMENTS IN THE MHC-PMS
+Product requirement
+The MHC-PMS shall be available to all clinics during normal working hours
+(Mon–Fri, 0830–17.30). Downtime within normal working hours shall not
+exceed five seconds in any one day.
+Organizational requirement
+Users of the MHC-PMS system shall authenticate themselves using their
+health authority identity card.
+
+External requirement
+The system shall implement patient privacy provisions as set out in HStan-032006-priv.
+
+18
+Mangal Sain,
+Dongseo University, Korea
+
+GOALS AND REQUIREMENTS
+ Non-functional requirements may be very difficult to state
+
+precisely and imprecise requirements may be difficult to
+verify.
+ Goal
+▪
+
+A general intention of the user such as ease of use.
+
+ Verifiable non-functional requirement
+▪
+
+A statement using some measure that can be objectively
+tested.
+
+ Goals are helpful to developers as they convey the
+
+intentions of the system users.
+
+19
+Mangal Sain,
+Dongseo University, Korea
+
+USABILITY REQUIREMENTS
+ The system should be easy to use by medical staff and
+
+should be organized in such a way that user errors are
+minimized. (Goal)
+ Medical staff shall be able to use all the system
+functions after four hours of training. After this training,
+the average number of errors made by experienced
+users shall not exceed two per hour of system use.
+(Testable non-functional requirement)
+
+20
+Mangal Sain,
+Dongseo University, Korea
+
+METRICS FOR SPECIFYING NON-FUNCTIONAL
+REQUIREMENTS
+Property
+
+Measure
+
+Speed
+
+Processed transactions/second
+User/event response time
+Screen refresh time
+
+Size
+
+Mbytes
+Number of ROM chips
+
+Ease of use
+
+Training time
+Number of help frames
+
+Reliability
+
+Mean time to failure
+Probability of unavailability
+Rate of failure occurrence
+Availability
+
+Robustness
+
+Time to restart after failure
+Percentage of events causing failure
+Probability of data corruption on failure
+
+Portability
+
+Percentage of target dependent statements
+21
+Number of target systems
+Mangal Sain,
+Dongseo University, Korea
+
+DOMAIN REQUIREMENTS
+ The system’s operational domain imposes
+
+requirements on the system.
+▪
+
+For example, a train control system has to take into
+account the braking characteristics in different weather
+conditions.
+
+ Domain requirements can be new functional
+
+requirements, constraints on existing requirements,
+or define specific computations.
+ If domain requirements are not satisfied, the system
+may be unworkable.
+22
+Mangal Sain,
+Dongseo University, Korea
+
+TRAIN PROTECTION SYSTEM
+ This is a domain requirement for a train protection
+
+system:
+ The deceleration of the train shall be computed as:
+▪
+
+Dtrain = Dcontrol + Dgradient
+
+▪
+
+where Dgradient is 9.81ms2 * compensated gradient/alpha
+and where the values of 9.81ms2 /alpha are known for
+different types of train.
+
+ It is difficult for a non-specialist to understand the
+
+implications of this and how it interacts with other
+requirements.
+23
+Mangal Sain,
+Dongseo University, Korea
+
+DOMAIN REQUIREMENTS PROBLEMS
+ Understandability
+▪
+
+Requirements are expressed in the language of the
+application domain;
+▪ This is often not understood by software engineers
+developing the system.
+ Implicitness
+
+▪
+
+Domain specialists understand the area so well that
+they do not think of making the domain requirements
+explicit.
+
+24
+Mangal Sain,
+Dongseo University, Korea
+
+THE SOFTWARE REQUIREMENTS DOCUMENT
+ The software requirements document is the official
+
+statement of what is required of the system
+developers.
+ Can include both a definition of user requirements
+and a specification of the system requirements.
+ It is NOT a design document. As far as possible, it
+should set of WHAT the system should do rather
+than HOW it should do it.
+
+25
+Mangal Sain,
+Dongseo University, Korea
+
+AGILE METHODS AND REQUIREMENTS
+ Many agile methods argue that producing a requirements
+
+document is a waste of time as requirements change so
+quickly
+ The document is therefore always out of date
+ Methods such as XP use incremental requirements
+engineering and express requirements as ‘user stories’
+(discussed in Chapter 3).
+ This is practical for business systems but problematic for
+systems that require a lot of pre-delivery analysis (e.g.
+critical systems) or systems developed by several teams
+
+26
+Mangal Sain,
+Dongseo University, Korea
+
+USERS OF A REQUIREMENTS DOCUMENT
+
+27
+Mangal Sain,
+Dongseo University, Korea
+
+THE STRUCTURE OF A REQUIREMENTS DOCUMENT
+Chapter
+
+Description
+
+Preface
+
+This should define the expected readership of the document and describe
+its version history, including a rationale for the creation of a new version
+and a summary of the changes made in each version.
+
+Introduction
+
+This should describe the need for the system. It should briefly describe the
+system’s functions and explain how it will work with other systems. It
+should also describe how the system fits into the overall business or
+strategic objectives of the organization commissioning the software.
+
+Glossary
+
+This should define the technical terms used in the document. You should
+not make assumptions about the experience or expertise of the reader.
+
+User requirements
+definition
+
+Here, you describe the services provided for the user. The nonfunctional
+system requirements should also be described in this section. This
+description may use natural language, diagrams, or other notations that are
+understandable to customers. Product and process standards that must be
+followed should be specified.
+
+System architecture
+
+This chapter should present a high-level overview of the anticipated system
+architecture, showing the distribution of functions across system modules.
+Architectural components that are reused should be highlighted.
+28
+Mangal Sain,
+Dongseo University, Korea
+
+THE STRUCTURE OF A REQUIREMENTS DOCUMENT
+Chapter
+
+Description
+
+System
+requirements
+specification
+
+This should describe the functional and nonfunctional requirements in more detail.
+If necessary, further detail may also be added to the nonfunctional requirements.
+Interfaces to other systems may be defined.
+
+System models
+
+This might include graphical system models showing the relationships between
+the system components and the system and its environment. Examples of
+possible models are object models, data-flow models, or semantic data models.
+
+System evolution
+
+This should describe the fundamental assumptions on which the system is based,
+and any anticipated changes due to hardware evolution, changing user needs,
+and so on. This section is useful for system designers as it may help them avoid
+design decisions that would constrain likely future changes to the system.
+
+Appendices
+
+These should provide detailed, specific information that is related to the
+application being developed; for example, hardware and database descriptions.
+Hardware requirements define the minimal and optimal configurations for the
+system. Database requirements define the logical organization of the data used
+by the system and the relationships between data.
+
+Index
+
+Several indexes to the document may be included. As well as a normal alphabetic
+index, there may be an index of diagrams, an index of functions, and so on.
+29
+Mangal Sain,
+Dongseo University, Korea
+
+REQUIREMENTS SPECIFICATION
+ The process of writing down the user and system
+
+requirements in a requirements document
+ User requirements have to be understandable by endusers and customers who do not have a technical
+background
+ System requirements are more detailed requirements and
+may include more technical information
+ The requirements may be part of a contract for the system
+development
+▪
+
+It is therefore important that these are as complete as possible
+
+30
+Mangal Sain,
+Dongseo University, Korea
+
+WAYS OF WRITING A SYSTEM REQUIREMENTS
+SPECIFICATION
+Notation
+
+Description
+
+Natural language
+
+The requirements are written using numbered sentences in natural language.
+Each sentence should express one requirement.
+
+Structured natural
+language
+
+The requirements are written in natural language on a standard form or
+template. Each field provides information about an aspect of the
+requirement.
+
+Design description
+languages
+
+This approach uses a language like a programming language, but with more
+abstract features to specify the requirements by defining an operational
+model of the system. This approach is now rarely used although it can be
+useful for interface specifications.
+
+Graphical notations
+
+Graphical models, supplemented by text annotations, are used to define the
+functional requirements for the system; UML use case and sequence
+diagrams are commonly used.
+
+Mathematical
+specifications
+
+These notations are based on mathematical concepts such as finite-state
+machines or sets. Although these unambiguous specifications can reduce
+the ambiguity in a requirements document, most customers don’t understand
+a formal specification. They cannot check that it represents what they want
+and are reluctant to accept it as a system contract
+31
+Mangal Sain,
+Dongseo University, Korea
+
+REQUIREMENTS AND DESIGN
+ In principle, requirements should state what the system
+
+should do and the design should describe how it does
+this.
+ In practice, requirements and design are inseparable
+▪
+
+A system architecture may be designed to structure the
+requirements;
+▪ The system may inter-operate with other systems that
+generate design requirements;
+▪ The use of a specific architecture to satisfy non-functional
+requirements may be a domain requirement.
+▪
+
+This may be the consequence of a regulatory requirement.
+
+32
+Mangal Sain,
+Dongseo University, Korea
+
+NATURAL LANGUAGE SPECIFICATION
+ Requirements are written as natural language
+
+sentences supplemented by diagrams and tables.
+ Used for writing requirements because it is
+expressive, intuitive and universal. This means that
+the requirements can be understood by users and
+customers.
+
+33
+Mangal Sain,
+Dongseo University, Korea
+
+GUIDELINES FOR WRITING REQUIREMENTS
+ Create a standard format and use it for all requirements.
+ Use language in a consistent way. Use shall for
+
+mandatory requirements, should for desirable
+requirements.
+ Use text highlighting to identify key parts of the
+requirement.
+ Avoid the use of computer jargon.
+ Include an explanation (rationale) of why a requirement is
+necessary.
+
+Mangal Sain,
+Dongseo University, Korea
+
+PROBLEMS WITH NATURAL LANGUAGE
+ Lack of clarity
+▪
+
+Precision is difficult without making the document
+difficult to read.
+
+ Requirements confusion
+▪
+
+Functional and non-functional requirements tend to be
+mixed-up.
+
+ Requirements amalgamation
+▪
+
+Several different requirements may be expressed
+together.
+
+Mangal Sain,
+Dongseo University, Korea
+
+EXAMPLE REQUIREMENTS FOR THE INSULIN PUMP SOFTWARE
+SYSTEM
+3.2 The system shall measure the blood sugar and deliver insulin, if
+required, every 10 minutes. (Changes in blood sugar are relatively slow so
+more frequent measurement is unnecessary; less frequent measurement
+could lead to unnecessarily high sugar levels.)
+3.6 The system shall run a self-test routine every minute with the
+conditions to be tested and the associated actions defined in Table 1. (A
+self-test routine can discover hardware and software problems and alert the
+user to the fact the normal operation may be impossible.)
+
+36
+Mangal Sain,
+Dongseo University, Korea
+
+STRUCTURED SPECIFICATIONS
+ An approach to writing requirements where the
+
+freedom of the requirements writer is limited and
+requirements are written in a standard way.
+ This works well for some types of requirements e.g.
+requirements for embedded control system but is
+sometimes too rigid for writing business system
+requirements.
+
+37
+Mangal Sain,
+Dongseo University, Korea
+
+FORM-BASED SPECIFICATIONS
+ Definition of the function or entity.
+ Description of inputs and where they come from.
+ Description of outputs and where they go to.
+ Information about the information needed for the
+
+computation and other entities used.
+ Description of the action to be taken.
+ Pre and post conditions (if appropriate).
+ The side effects (if any) of the function.
+
+Mangal Sain,
+Dongseo University, Korea
+
+A STRUCTURED SPECIFICATION OF A REQUIREMENT FOR AN
+INSULIN PUMP
+
+39
+Mangal Sain,
+Dongseo University, Korea
+
+A STRUCTURED SPECIFICATION OF A REQUIREMENT
+FOR AN INSULIN PUMP
+
+40
+Mangal Sain,
+Dongseo University, Korea
+
+TABULAR SPECIFICATION
+ Used to supplement natural language
+ Particularly useful when you have to define a number
+
+of possible alternative courses of action
+ For example, the insulin pump systems bases its
+computations on the rate of change of blood sugar
+level and the tabular specification explains how to
+calculate the insulin requirement for different scenarios
+
+Mangal Sain,
+Dongseo University, Korea
+
+TABULAR SPECIFICATION OF COMPUTATION FOR AN INSULIN
+PUMP
+Condition
+
+Action
+
+Sugar level falling (r2 < r1)
+
+CompDose = 0
+
+Sugar level stable (r2 = r1)
+
+CompDose = 0
+
+Sugar level increasing and rate of increase
+decreasing
+((r2 – r1) < (r1 – r0))
+
+CompDose = 0
+
+Sugar level increasing and rate of increase
+stable or increasing
+((r2 – r1) ≥ (r1 – r0))
+
+CompDose =
+round ((r2 – r1)/4)
+If rounded result = 0 then
+CompDose = MinimumDose
+
+42
+Mangal Sain,
+Dongseo University, Korea
+
+REQUIREMENTS ENGINEERING PROCESSES
+ The processes used for RE vary widely depending
+
+on the application domain, the people involved and
+the organisation developing the requirements.
+ However, there are a number of generic activities
+common to all processes
+▪
+
+Requirements elicitation;
+▪ Requirements analysis;
+▪ Requirements validation;
+▪ Requirements management.
+ In practice, RE is an iterative activity in which these
+
+processes are interleaved.
+43
+Mangal Sain,
+Dongseo University, Korea
+
+A SPIRAL VIEW OF THE REQUIREMENTS
+ENGINEERING PROCESS
+
+44
+Mangal Sain,
+Dongseo University, Korea
+
+Lecture 5 Part 3
+
+Requirements elicitation and analysis
+
+REQUIREMENTS ELICITATION AND ANALYSIS
+ Sometimes called requirements elicitation or
+
+requirements discovery.
+ Involves technical staff working with customers to find
+out about the application domain, the services that the
+system should provide and the system’s operational
+constraints.
+ May involve end-users, managers, engineers involved in
+maintenance, domain experts, trade unions, etc. These
+are called stakeholders.
+
+46
+
+PROBLEMS OF REQUIREMENTS ANALYSIS
+ Stakeholders don’t know what they really want.
+ Stakeholders express requirements in their own terms.
+
+ Different stakeholders may have conflicting
+
+requirements.
+ Organizational and political factors may influence the
+system requirements.
+ The requirements change during the analysis process.
+New stakeholders may emerge and the business
+environment may change.
+
+REQUIREMENTS ELICITATION AND ANALYSIS
+ Software engineers work with a range of system
+
+stakeholders to find out about the application domain,
+the services that the system should provide, the required
+system performance, hardware constraints, other
+systems, etc.
+ Stages include:
+▪
+
+Requirements discovery,
+▪ Requirements classification and organization,
+▪ Requirements prioritization and negotiation,
+▪ Requirements specification.
+
+48
+
+THE REQUIREMENTS ELICITATION AND ANALYSIS PROCESS
+
+49
+
+PROCESS ACTIVITIES
+ Requirements discovery
+▪
+
+Interacting with stakeholders to discover their
+requirements. Domain requirements are also discovered
+at this stage.
+
+ Requirements classification and organization
+▪
+
+Groups related requirements and organizes them into
+coherent clusters.
+
+ Prioritization and negotiation
+▪
+
+Prioritizing requirements and resolving requirements
+conflicts.
+
+ Requirements specification
+
+▪
+
+Requirements are documented and input into the next
+round of the spiral.
+
+REQUIREMENTS DISCOVERY
+ The process of gathering information about the
+
+required and existing systems and distilling the user
+and system requirements from this information.
+ Interaction is with system stakeholders from
+managers to external regulators.
+ Systems normally have a range of stakeholders.
+
+51
+
+STAKEHOLDERS IN THE MHC-PMS
+ Patients whose information is recorded in the system.
+ Doctors who are responsible for assessing and treating
+
+patients.
+ Nurses who coordinate the consultations with doctors
+and administer some treatments.
+ Medical receptionists who manage patients’
+appointments.
+ IT staff who are responsible for installing and
+maintaining the system.
+
+52
+
+STAKEHOLDERS IN THE MHC-PMS
+ A medical ethics manager who must ensure that the
+
+system meets current ethical guidelines for patient
+care.
+ Health care managers who obtain management
+information from the system.
+ Medical records staff who are responsible for
+ensuring that system information can be maintained
+and preserved, and that record keeping procedures
+have been properly implemented.
+
+53
+
+INTERVIEWING
+ Formal or informal interviews with stakeholders are part of
+
+most RE processes.
+ Types of interview
+▪
+
+Closed interviews based on pre-determined list of questions
+▪ Open interviews where various issues are explored with
+stakeholders.
+ Effective interviewing
+▪
+
+Be open-minded, avoid pre-conceived ideas about the
+requirements and are willing to listen to stakeholders.
+▪ Prompt the interviewee to get discussions going using a
+springboard question, a requirements proposal, or by working
+together on a prototype system.
+54
+
+INTERVIEWS IN PRACTICE
+ Normally a mix of closed and open-ended interviewing.
+
+ Interviews are good for getting an overall understanding
+
+of what stakeholders do and how they might interact with
+the system.
+ Interviews are not good for understanding domain
+requirements
+▪
+
+Requirements engineers cannot understand specific domain
+terminology;
+▪ Some domain knowledge is so familiar that people find it hard
+to articulate or think that it isn’t worth articulating.
+
+SCENARIOS
+ Scenarios are real-life examples of how a system can
+
+be used.
+ They should include
+▪
+
+A description of the starting situation;
+▪ A description of the normal flow of events;
+▪ A description of what can go wrong;
+▪ Information about other concurrent activities;
+▪ A description of the state when the scenario finishes.
+
+SCENARIO FOR COLLECTING MEDICAL HISTORY IN MHC-PMS
+
+SCENARIO FOR COLLECTING MEDICAL HISTORY IN MHC-PMS
+
+58
+
+USE CASES
+ Use-cases are a scenario based technique in the UML
+
+which identify the actors in an interaction and which
+describe the interaction itself.
+ A set of use cases should describe all possible
+interactions with the system.
+ High-level graphical model supplemented by more
+detailed tabular description
+ Sequence diagrams may be used to add detail to usecases by showing the sequence of event processing in
+the system.
+
+59
+
+USE CASES FOR THE MHC-PMS
+
+60
+
+ETHNOGRAPHY
+ A social scientist spends a considerable time observing
+
+and analysing how people actually work.
+ People do not have to explain or articulate their work.
+ Social and organizational factors of importance may be
+observed.
+ Ethnographic studies have shown that work is usually
+richer and more complex than suggested by simple
+system models.
+
+61
+
+SCOPE OF ETHNOGRAPHY
+ Requirements that are derived from the way that people
+
+actually work rather than the way I which process
+definitions suggest that they ought to work.
+ Requirements that are derived from cooperation and
+awareness of other people’s activities.
+▪
+
+Awareness of what other people are doing leads to changes in
+the ways in which we do things.
+
+ Ethnography is effective for understanding existing
+
+processes but cannot identify new features that should
+be added to a system.
+
+62
+
+FOCUSED ETHNOGRAPHY
+ Developed in a project studying the air traffic
+
+control process
+ Combines ethnography with prototyping
+ Prototype development results in unanswered
+questions which focus the ethnographic analysis.
+ The problem with ethnography is that it studies
+existing practices which may have some historical
+basis which is no longer relevant.
+
+63
+
+ETHNOGRAPHY AND PROTOTYPING FOR REQUIREMENTS
+ANALYSIS
+
+64
+
+KEY POINTS
+ Requirements for a software system set out what the
+
+system should do and define constraints on its operation
+and implementation.
+ Functional requirements are statements of the services
+that the system must provide or are descriptions of how
+some computations must be carried out.
+ Non-functional requirements often constrain the system
+being developed and the development process being
+used.
+ They often relate to the emergent properties of the system and
+
+therefore apply to the system as a whole.
+
+65
+
+KEY POINTS
+ The software requirements document is an agreed
+
+statement of the system requirements. It should be
+organized so that both system customers and software
+developers can use it.
+ The requirements engineering process is an iterative
+process including requirements elicitation, specification
+and validation.
+ Requirements elicitation and analysis is an iterative
+process that can be represented as a spiral of activities –
+requirements discovery, requirements classification and
+organization, requirements negotiation and requirements
+documentation.
+
+66
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+TOPICS COVERED
+ UML
+ Context models
+ Process models
+ Interaction models
+ Structural models
+ Behavioral models
+
+ Model-driven engineering
+
+2
+
+Lecture 6 Part 1
+
+System modeling and
+Introduction to UML
+
+SYSTEM MODELING
+ System modeling is the process of developing abstract
+
+models of a system, with each model presenting a
+different view or perspective of that system.
+ System modeling has now come to mean representing a
+system using some kind of graphical notation, which is
+now almost always based on notations in the Unified
+Modeling Language (UML).
+ System modeling helps the analyst to understand the
+functionality and organization of the system and models
+are used to communicate with customers.
+
+EXISTING AND PLANNED SYSTEM MODELS
+ Models of the existing system can help clarify what the existing
+
+system does and can be used as a basis for discussing its
+strengths and weaknesses. These then can lead to
+requirements for the new system.
+ Models of the new system can help explain the proposed
+system to stakeholders. Engineers use these models to
+discuss design proposals and to document the system for
+implementation.
+ In a model-driven engineering process, it is possible to
+generate a complete or partial system implementation from the
+system model.
+
+SYSTEM PERSPECTIVES
+ An external perspective, where you model the context or
+
+environment of the system.
+ An interaction perspective, where you model the
+interactions between a system and its environment, or
+between the components of a system.
+ A structural perspective, where you model the
+organization of a system or the structure of the data that
+is processed by the system.
+ A behavioral perspective, where you model the dynamic
+behavior of the system and how it responds to events.
+
+THE UNIFIED MODELING LANGUAGE
+The Unified Modeling Language is a set of 13 different
+diagram types that may be used to model software
+systems. It emerged from work in the 1990s on objectoriented modeling where similar object-oriented
+notations were integrated to create the UML. A major
+revision (UML 2) was finalized in 2004. The UML is
+universally accepted as the standard approach for
+developing models of software systems. Variants have
+been proposed for more general system modeling.
+
+INTRODUCTION TO UML
+ What is UML?
+ Motivations for UML
+
+ Types of UML diagrams
+ UML syntax
+ Descriptions of the various diagram types
+
+
+
+Rational Rose and UML
+
+ UML pitfalls
+
+8
+
+WHAT IS UML?
+ A standardized, graphical “modeling language” for
+
+communicating software design.
+ Allows implementation-independent specification of:
+user/system interactions (required behaviors)
+ partitioning of responsibility (OO)
+ integration with larger or existing systems
+ data flow and dependency
+ operation orderings (algorithms)
+ concurrent operations
+
+
+ Pretty pictures.
+ UML is not “process”.
+
+(That is, it doesn’t tell you how
+to do things, only what you should do.)
+9
+
+MOTIVATIONS FOR UML
+ UML is a fusion of ideas from several precursor
+
+modeling languages.
+ We need a modeling language to:
+help develop efficient, effective and correct designs,
+particularly Object Oriented designs.
+ communicate clearly with project stakeholders (concerned
+parties: developers, customer, etc).
+ give us the “big picture” view of the project.
+
+
+10
+
+TYPES OF UML DIAGRAMS
+ There are different types of UML diagram,
+
+each with slightly different syntax rules:
+ use cases.
+
+ class diagrams.
+ sequence diagrams.
+ package diagrams.
+
+ state diagrams
+ activity diagrams
+ deployment diagrams.
+
+UML SYNTAX, 1
+ Actors:
+
+a UML actor indicates an interface (point
+of interaction) with the system.
+ We use actors to group and name sets of system
+
+interactions.
+ Actors may be people, or other systems.
+ An actor is NOT part of the system you are modeling.
+An actor is something external that your system has
+to deal with.
+ Boxes:
+
+boxes are used variously throughout UML
+to indicate discrete elements, groupings and
+containment.
+12
+
+UML SYNTAX, 2
+ Arrows:
+
+arrows indicate all manner of things,
+depending on which particular type of UML diagram
+they’re in. Usually, arrows indicate flow,
+dependency, association or generalization.
+ Cardinality: applied to arrows, cardinalities show
+relative numerical relationships between elements in
+a model: 1 to 1, 1 to many, etc.
+
+13
+
+UML SYNTAX, 3
+ Constraints:
+
+allow notation of arbitrary constraints
+on model elements. Used, for example, to constrain
+the value of a class attribute (a piece of data).
+ Stereotypes: allow us to extend the semantics of UML
+with English. A stereotype is usually a word or short
+phrase that describes what a diagram element does.
+That is, we mark an element with a word that will
+remind us of a common (stereotypical) role for that
+sort of thing. Stereotypes should always be applied
+consistently (with the same intended meaning in all
+instances).
+14
+
+UML DIAGRAMS: USE CASES
+ A use case encodes a typical user interaction with the
+
+system. In particular, it:
+
+captures some user-visible function.
+ achieves some concrete goal for the user.
+
+
+ A complete set of use cases largely defines the
+
+requirements for your system: everything the user can
+see, and would like to do.
+ The granularity of your use cases determines the
+number of them (for you system). A clear design
+depends on showing the right level of detail.
+ A use case maps actors to functions. The actors need
+not be people.
+
+Use case examples, 1
+(High-level use case for powerpoint.)
+
+ABOUT THE LAST EXAMPLE...
+ Although this is a valid use case for powerpoint,
+
+and it completely captures user interaction with
+powerpoint, it’s too vague to be useful.
+
+17
+
+USE CASE EXAMPLES, 2
+(FINER-GRAINED USE CASES FOR POWERPOINT.)
+
+ABOUT THE LAST EXAMPLE...
+ The last example gives a more useful view of
+
+powerpoint (or any similar application).
+ The cases are vague, but they focus your
+attention the key features, and would help in
+developing a more detailed requirements
+specification.
+ It still doesn’t give enough information to
+characterize powerpoint, which could be
+specified with tens or hundreds of use cases
+(though doing so might not be very useful
+either).
+
+USE CASE EXAMPLES, 3
+(RELATIONSHIPS IN A NEWS WEB SITE.)
+
+20
+
+ABOUT THE LAST EXAMPLE...
+ The last is more complicated and realistic use case
+
+diagram. It captures several key use cases for the
+system.
+ Note the multiple actors. In particular, ‘AP wire’ is
+an actor, with an important interaction with the
+system, but is not a person (or even a computer
+system, necessarily).
+ The notes between << >> marks are stereotypes:
+identifiers added to make the diagram more
+informative. Here they differentiate between
+different roles (ie, different meanings of an arrow in
+this diagram).
+21
+
+UML DIAGRAMS: CLASS DIAGRAM
+ Motivated by Object-Oriented design and
+
+programming (OOD, OOP).
+ A class diagram partitions the system into areas of
+responsibility (classes), and shows “associations”
+(dependencies) between them.
+ Attributes (data), operations (methods), constraints,
+part-of (navigability) and type-of (inheritance)
+relationships, access, and cardinality (1 to many) may
+all be noted.
+
+CLASS DIAGRAM “PERSPECTIVE”
+ Class diagrams can make sense at three
+
+distinct levels, or perspectives:
+ Conceptual: the diagram represents the concepts in
+
+the project domain. That is, it is a partitioning of
+the relevant roles and responsibilities in the domain.
+ Specification: shows interfaces between components
+in the software. Interfaces are independent of
+implementation.
+ Implementation: shows classes that correspond
+directly to computer code (often Java or C++ classes).
+Serves as a blueprint for an actual realization of the
+software in code.
+
+CLASS DIAGRAM EXAMPLES
+(A CLASSROOM SCHEDULING SYSTEM: SPECIFICATION PERSPECTIVE.)
+
+24
+
+ABOUT THE LAST EXAMPLE...
+ Each box is a class, with necessary attributes and
+
+operations specified.
+ Navigability arrows show which classes can
+reference which others.
+ Cardinality marked in bi-directional manner on
+arrows.
+ The classes together represent the complete
+system; thus the the classes are a partitioning of
+the system.
+
+25
+
+What is a Class Diagram?
+• A class diagram is a view of the static structure
+of a system
+– Models contain many class diagrams
+
+• Class diagrams contain:
+– Packages, classes, interfaces, and relationships
+
+• Notation:
+Package
+Name
+
+Class Name
+
+<<Interface>>
+
+Interface Name
+
+Relationships
+• Class diagrams may contain the following relati
+onships:
+– Association, aggregation, dependency, realize, and i
+nheritance
+
+• Notation:
+Association
+
+Aggregation
+
+Inheritance
+
+Dependency
+
+Realize
+
+UML DIAGRAMS: SEQUENCE DIAGRAM
+ Sequence diagram describe algorithms, though usually
+
+at a high level: the operations in a useful sequence
+diagram specify the “message passing” (method
+invocation) between objects (classes, roles) in the
+system.
+ The notation is based on each object’s life span, with
+message passing marked in time-order between the
+objects. Iteration and conditional operations may be
+specified.
+ May in principle be used at the same three levels as
+class diagrams, though the specification level will
+usually be most useful. (At the implementation level,
+you might better use pseudocode.)
+28
+
+SEQUENCE DIAGRAM EXAMPLE
+
+29
+
+ABOUT THE LAST EXAMPLE...
+ Each box with connected line represents a distinct thing, where all
+
+the things aren’t necessarily in the same piece of software, or
+software at all.
+ Arrows indicate message passing. That is, an arrow indicates that
+one thing tells another thing to do something.
+ Reverse arrows are implied. If arrow goes from A to B, and then
+immediately afterward an arrow goes from A to something else, it
+is understood that B completed it’s operation and returned control
+(and a result, probably) to A.
+ Time runs down the page. An comes before an arrow that is below
+it.
+ Bracketed expressions indicate conditions. In the diagram, an
+error document is returned if the fileLoad() operation returns and
+error.
+30
+
+UML DIAGRAMS: PACKAGE DIAGRAM
+ A type of class diagram, package diagrams show
+
+dependencies between high-level system component.
+ A “package” is usually a collection of related classes,
+and will usually be specified by it’s own class diagram.
+ The software in two distinct packages is separate;
+packages only interact through well-defined interfaces,
+there is no direct sharing of data or code.
+ Not all packages in a system’s package diagram are
+new software; many packages (components) in a
+complex system are often already available as existing
+or off-the-shelf software.
+31
+
+PACKAGE DIAGRAM EXAMPLE
+
+32
+
+ABOUT THE LAST EXAMPLE...
+ This package diagram indicates that:
+
+there are three dependent but decoupled software
+components that will be developed in “My Project”,
+which is itself a package or component.
+ Parts of my software depend on some existing
+software packages, which I won’t be developing, but
+just using (“Webserver” and “Database”).
+ There is a globally available package “User
+authentication” which all the other packages depend
+on.
+
+
+UML DIAGRAMS: OTHER DIAGRAMS
+ State diagrams:
+
+similar in function to
+sequence diagrams, but with focus on the
+prerequisites for an operation, rather than the
+exact sequence of actions.
+ Deployment diagrams: shows the installation
+of software on hardware platforms.
+ Others: activity diagrams, collaboration
+diagrams.
+ Look in UML Distilled for examples.
+34
+
+Lecture 6 Part 2
+
+Context models
+
+CONTEXT MODELS
+ Context models are used to illustrate the operational
+
+context of a system - they show what lies outside the
+system boundaries.
+ Social and organizational concerns may affect the
+decision on where to position system boundaries.
+ Architectural models show the system and its
+relationship with other systems.
+
+36
+
+THE CONTEXT OF THE MHC-PMS
+
+37
+
+PROCESS PERSPECTIVE
+ Context models simply show the other systems in the
+
+environment, not how the system being developed is
+used in that environment
+ Process models reveal how the system being
+developed is used in broader business processes
+ UML activity diagrams may be used to define business
+process models
+
+38
+
+PROCESS MODEL OF INVOLUNTARY DETENTION
+
+39
+
+INTERACTION MODELS
+ Modeling user interaction is important as it helps to
+
+identify user requirements
+ Modeling system-to-system interaction highlights the
+communication problems that may arise
+ Modeling component interaction helps us understand if a
+proposed system structure is likely to deliver the required
+system performance and dependability
+ Use case diagrams and sequence diagrams may be used
+for interaction modeling
+
+40
+
+USE CASE MODELING
+ Use cases were developed originally to support
+
+requirements elicitation and now are incorporated
+into the UML.
+ Each use case represents a discrete task that
+involves external interaction with a system.
+ Actors in a use case may be people, time, or other
+systems.
+
+41
+
+TRANSFER-DATA USE CASE
+ A use case in the MHC-PMS
+
+42
+
+TABULAR DESCRIPTION OF THE ‘TRANSFER DATA’ USE-CASE
+MHC-PMS: Transfer data
+Medical receptionist, patient records system (PRS)
+
+Description
+
+A receptionist may transfer data from the MHC-PMS to a
+general patient record database that is maintained by a health
+authority. The information transferred may either be updated
+personal information (address, phone number, etc.) or a
+summary of the patient’s diagnosis and treatment.
+
+Data
+
+Patient’s personal information, treatment summary
+
+Stimulus
+
+User command issued by medical receptionist
+
+Response
+
+Confirmation that PRS has been updated
+
+Comments
+
+The receptionist must have appropriate security permissions to
+access the patient information and the PRS.
+
+43
+
+Actors
+
+USE CASES IN THE MHC-PMS INVOLVING THE ROLE
+‘MEDICAL RECEPTIONIST’
+
+44
+
+SEQUENCE DIAGRAMS
+ Sequence diagrams are part of the UML and are used to
+
+model the interactions between the actors and the objects
+within a system
+ A sequence diagram shows the sequence of interactions
+that take place during a particular use case or use case
+instance
+ The objects and actors involved are listed along the top of
+the diagram, with a dotted line drawn vertically from these
+ Interactions between objects are indicated by annotated
+arrows
+
+45
+
+SEQUENCE DIAGRAM FOR VIEW PATIENT INFORMATION
+
+SEQUENCE DIAGRAM FOR TRANSFER DATA
+
+47
+
+STRUCTURAL MODELS
+ Structural models of software display the organization
+
+of a system in terms of the components that make up
+that system and their relationships.
+ Structural models may be static models, which show
+the structure of the system design or dynamic models,
+which show the organization of the system when it is
+executing.
+ These are not the same things—the dynamic
+organization of a system as a set of interacting
+threads may be very different from a static model of
+the system components.
+
+CLASS DIAGRAMS
+ Class diagrams are used when developing an object-
+
+oriented system model to show the classes in a system
+and the associations between these classes
+ An object class can be thought of as a general definition of
+one kind of system object
+ An association is a link between classes that indicates that
+there is some relationship between these classes
+ When you are developing models during the early stages
+of the software engineering process, objects represent
+something in the real world, such as a patient, a
+prescription, doctor, etc.
+49
+
+UML CLASSES AND ASSOCIATION
+
+50
+
+CLASSES AND ASSOCIATIONS IN THE MHC-PMS
+
+THE CONSULTATION CLASS
+
+52
+
+Lecture 6 Part 3
+
+Generalization and
+Model-driven engineering
+
+GENERALIZATION
+ Generalization is an everyday technique that we use to
+
+manage complexity.
+ Rather than learn the detailed characteristics of every
+entity that we experience, we place these entities in
+more general classes (animals, cars, houses, etc.) and
+learn the characteristics of these classes.
+ This allows us to infer that different members of these
+classes have some common characteristics e.g.
+squirrels and rats are rodents.
+
+54
+
+GENERALIZATION
+ In modeling systems, it is often useful to examine the classes in
+
+a system to see if there is scope for generalization. If changes
+are proposed, then you do not have to look at all classes in the
+system to see if they are affected by the change.
+ In object-oriented languages, such as Java, generalization is
+implemented using the class inheritance mechanisms built into
+the language
+ In a generalization, the attributes and operations associated with
+higher-level classes are also associated with the lower-level
+classes
+ The lower-level classes are subclasses inherit the attributes and
+operations from their superclasses. These lower-level classes
+then add more specific attributes and operations.
+55
+
+A GENERALIZATION HIERARCHY
+
+A GENERALIZATION HIERARCHY WITH ADDED DETAIL
+
+OBJECT CLASS AGGREGATION MODELS
+ An aggregation model shows how classes that are
+
+collections are composed of other classes
+ Aggregation models are similar to the part-of
+relationship in semantic data models
+
+THE AGGREGATION ASSOCIATION
+
+59
+
+BEHAVIORAL MODELS
+ Behavioral models are models of the dynamic behavior of
+
+a system as it is executing. They show what happens or
+what is supposed to happen when a system responds to
+a stimulus from its environment.
+ You can think of these stimuli as being of two types:
+▪
+
+Data Some data arrives that has to be processed by the
+system
+▪ Events Some event happens that triggers system processing.
+Events may have associated data, although this is not always
+the case.
+
+60
+
+DATA-DRIVEN MODELING
+ Many business systems are data-processing systems
+
+that are primarily driven by data. They are controlled by
+the data input to the system, with relatively little external
+event processing.
+ Data-driven models show the sequence of actions
+involved in processing input data and generating an
+associated output.
+ They are particularly useful during the analysis of
+requirements as they can be used to show end-to-end
+processing in a system.
+
+AN ACTIVITY MODEL OF THE INSULIN PUMP’S OPERATION
+
+62
+
+ORDER PROCESSING
+
+63
+
+EVENT-DRIVEN MODELING
+ Real-time systems are often event-driven, with minimal
+
+data processing. For example, a landline phone
+switching system responds to events such as ‘receiver
+off hook’ by generating a dial tone.
+ Event-driven modeling shows how a system responds to
+external and internal events.
+ It is based on the assumption that a system has a finite
+number of states and that events (stimuli) may cause a
+transition from one state to another.
+
+64
+
+STATE MACHINE MODELS
+ These model the behaviour of the system in response to
+
+external and internal events.
+ They show the system’s responses to stimuli so are often
+used for modelling real-time systems.
+ State machine models show system states as nodes and
+events as arcs between these nodes. When an event
+occurs, the system moves from one state to another.
+ Statecharts are an integral part of the UML and are used to
+represent state machine models.
+
+65
+
+STATE DIAGRAM OF A MICROWAVE OVEN
+
+66
+
+STATES AND STIMULI FOR THE MICROWAVE OVEN (A)
+Description
+
+Waiting
+
+The oven is waiting for input. The display shows the current time.
+
+Half power
+
+The oven power is set to 300 watts. The display shows ‘Half power’.
+
+Full power
+
+The oven power is set to 600 watts. The display shows ‘Full power’.
+
+Set time
+
+The cooking time is set to the user’s input value. The display shows the
+cooking time selected and is updated as the time is set.
+
+Disabled
+
+Oven operation is disabled for safety. Interior oven light is on. Display
+shows ‘Not ready’.
+
+Enabled
+
+Oven operation is enabled. Interior oven light is off. Display shows ‘Ready
+to cook’.
+
+Operation
+
+Oven in operation. Interior oven light is on. Display shows the timer
+countdown. On completion of cooking, the buzzer is sounded for five
+seconds. Oven light is on. Display shows ‘Cooking complete’ while buzzer
+is sounding.
+
+67
+
+State
+
+STATES AND STIMULI FOR THE MICROWAVE OVEN (B)
+Description
+
+Half power
+
+The user has pressed the half-power button.
+
+Full power
+
+The user has pressed the full-power button.
+
+Timer
+
+The user has pressed one of the timer buttons.
+
+Number
+
+The user has pressed a numeric key.
+
+Door open
+
+The oven door switch is not closed.
+
+Door closed
+
+The oven door switch is closed.
+
+Start
+
+The user has pressed the Start button.
+
+Cancel
+
+The user has pressed the Cancel button.
+
+68
+
+Stimulus
+
+MICROWAVE OVEN OPERATION
+
+69
+
+MODEL-DRIVEN ENGINEERING
+ Model-driven engineering (MDE) is an approach to
+
+software development where models rather than
+programs are the principal outputs of the development
+process.
+ The programs that execute on a hardware/software
+platform are then generated automatically from the
+models.
+ Proponents of MDE argue that this raises the level of
+abstraction in software engineering so that engineers no
+longer have to be concerned with programming language
+details or the specifics of execution platforms.
+70
+
+USAGE OF MODEL-DRIVEN ENGINEERING
+ Model-driven engineering is still at an early stage of
+
+development, and it is unclear whether or not it will have a
+significant effect on software engineering practice.
+ Pros
+▪
+
+Allows systems to be considered at higher levels of abstraction
+▪ Generating code automatically means that it is cheaper to adapt
+systems to new platforms
+ Cons
+▪
+
+Models for abstraction are not necessarily right for
+implementation
+▪ Savings from generating code may be outweighed by the costs
+of developing translators for new platforms
+71
+
+MODEL DRIVEN ARCHITECTURE
+ Model-driven architecture (MDA) was the precursor of the
+
+more general model-driven engineering
+ MDA is a model-focused approach to software design and
+implementation that uses a subset of UML models to
+describe a system
+ Models at different levels of abstraction are created. From
+a high-level, platform independent model, it is possible, in
+principle, to generate a working program without manual
+intervention.
+
+TYPES OF MODEL
+ A computation independent model (CIM)
+▪
+
+These model the important domain abstractions used in a
+system. CIMs are sometimes called domain models.
+
+ A platform independent model (PIM)
+▪
+
+These model the operation of the system without reference to its
+implementation. The PIM is usually described using UML models
+that show the static system structure and how it responds to
+external and internal events.
+
+ Platform specific models (PSM)
+▪
+
+These are transformations of the platform-independent model
+with a separate PSM for each application platform. In principle,
+there may be layers of PSM, with each layer adding some
+platform-specific detail.
+73
+
+MDA TRANSFORMATIONS
+
+MULTIPLE PLATFORM-SPECIFIC MODELS
+
+AGILE METHODS AND MDA
+ The developers of MDA claim that it is intended to support
+
+an iterative approach to development and so can be used
+within agile methods
+ The notion of extensive up-front modeling contradicts the
+fundamental ideas in the agile manifesto and I suspect that
+few agile developers feel comfortable with model-driven
+engineering
+ If transformations can be completely automated and a
+complete program generated from a PIM, then, in principle,
+MDA could be used in an agile development process as no
+separate coding would be required
+76
+
+EXECUTABLE UML
+ The fundamental notion behind model-driven engineering
+
+is that completely automated transformation of models to
+code should be possible.
+ This is possible using a subset of UML 2, called
+Executable UML or xUML.
+
+77
+
+FEATURES OF EXECUTABLE UML
+ To create an executable subset of UML, the number of
+
+model types has therefore been dramatically reduced to
+these 3 key types:
+▪
+
+Domain models that identify the principal concerns in a system.
+They are defined using UML class diagrams and include objects,
+attributes and associations.
+▪ Class models in which classes are defined, along with their
+attributes and operations.
+▪ State models in which a state diagram is associated with each
+class and is used to describe the life cycle of the class.
+ The dynamic behavior of the system may be specified
+
+declaratively using the object constraint language (OCL), or
+may be expressed using UML’s action language.
+
+KEY POINTS
+ A model is an abstract view of a system that ignores system
+
+details. Complementary system models can be developed to
+show the system’s context, interactions, structure and behavior.
+ Context models show how a system that is being modeled is
+positioned in an environment with other systems and processes.
+ Use case diagrams and sequence diagrams are used to describe
+the interactions between users and systems in the system being
+designed. Use cases describe interactions between a system
+and external actors; sequence diagrams add more information to
+these by showing interactions between system objects.
+ Structural models show the organization and architecture of a
+system. Class diagrams are used to define the static structure of
+classes in a system and their associations.
+
+KEY POINTS
+ Behavioral models are used to describe the dynamic behavior
+
+of an executing system. This behavior can be modeled from
+the perspective of the data processed by the system, or by the
+events that stimulate responses from a system.
+ Activity diagrams may be used to model the processing of
+data, where each activity represents one process step.
+ State diagrams are used to model a system’s behavior in
+response to internal or external events.
+ Model-driven engineering is an approach to software
+development in which a system is represented as a set of
+models that can be automatically transformed to executable
+code.
+
+80
+
+Advanced Software
+Engineering
+Professor Mangal Sain
+
+TOPICS COVERED
+ Architectural design decisions
+ Architectural views
+ Architectural patterns (styles)
+
+ Application architectures
+
+Lecture 7 Part 1
+
+Software architecture
+
+SOFTWARE ARCHITECTURE
+ The design process for identifying the sub-systems
+
+making up a system and the framework for sub-system
+control and communication is architectural design.
+ The output of this design process is a description of the
+software architecture.
+
+ARCHITECTURAL DESIGN
+ An early stage of the system design process.
+ Represents the link between specification and design
+
+processes.
+ Often carried out in parallel with some specification
+activities.
+ It involves identifying major system components and
+their communications.
+
+THE ARCHITECTURE OF A PACKING ROBOT CONTROL SYSTEM
+
+https://www.youtube.com/watch?v=m0IcEjgUDVQ
+
+ARCHITECTURAL ABSTRACTION
+ Architecture in the small is concerned with the
+
+architecture of individual programs. At this level, we are
+concerned with the way that an individual program is
+decomposed into components.
+ Architecture in the large is concerned with the
+architecture of complex enterprise systems that include
+other systems, programs, and program components.
+These enterprise systems are distributed over different
+computers, which may be owned and managed by
+different companies.
+
+ADVANTAGES OF EXPLICIT ARCHITECTURE
+ Software architecture is important because it affects the
+
+performance, robustness, distributability, and
+maintainability of a system
+ Stakeholder communication
+▪
+
+Architecture may be used as a focus of discussion by system
+stakeholders.
+
+ System analysis
+▪
+
+Means that analysis of whether the system can meet its nonfunctional requirements is possible.
+
+ Large-scale reuse
+▪
+
+The architecture may be reusable across a range of systems
+▪ Product-line architectures may be developed.
+
+ARCHITECTURAL REPRESENTATIONS
+ Simple, informal block diagrams showing entities and
+
+relationships are the most frequently used method for
+documenting software architectures.
+ But these have been criticized because they lack
+semantics, do not show the types of relationships
+between entities nor the visible properties of entities in
+the architecture.
+
+USE OF ARCHITECTURAL MODELS
+ As a way of facilitating discussion about the system design
+
+▪
+
+A high-level architectural view of a system is useful for
+communication with system stakeholders and project planning
+because it is not cluttered with detail. Stakeholders can relate to
+it and understand an abstract view of the system. They can then
+discuss the system as a whole without being confused by detail.
+
+ As a way of documenting an architecture that has been
+
+designed
+▪
+
+The aim here is to produce a complete system model that
+shows the different components in a system, their interfaces
+and their connections.
+
+ARCHITECTURAL DESIGN DECISIONS
+ Architectural design is a creative process so the process
+
+differs depending on the type of system being
+developed.
+ However, a number of common decisions span all
+design processes and these decisions affect the nonfunctional characteristics of the system.
+
+ARCHITECTURAL DESIGN DECISIONS
+ Is there a generic application architecture that can be
+
+used?
+ How will the system be distributed?
+ What architectural styles are appropriate?
+ What approach will be used to structure the system?
+ How will the system be decomposed into modules?
+ What control strategy should be used?
+ How will the architectural design be evaluated?
+ How should the architecture be documented?
+
+ARCHITECTURE REUSE
+ Systems in the same domain often have similar
+
+architectures that reflect domain concepts.
+ Application product lines are built around a core
+architecture with variants that satisfy particular customer
+requirements.
+ The architecture of a system may be designed around one
+of more architectural patterns or styles.
+▪
+
+These capture the essence of an architecture and can be
+instantiated in different ways
+
+ARCHITECTURE AND SYSTEM CHARACTERISTICS
+ Performance
+▪
+
+Localize critical operations and minimize communications. Use
+large rather than fine-grain components.
+
+ Security
+▪
+
+Use a layered architecture with critical assets in the inner layers.
+
+ Safety
+▪
+
+Localize safety-critical features in a small number of sub-systems.
+
+ Availability
+
+▪
+
+Include redundant components and mechanisms for fault
+tolerance.
+
+ Maintainability
+▪
+
+Use fine-grain, replaceable components.
+
+ARCHITECTURAL VIEWS
+ What views or perspectives are useful when designing and
+
+documenting a system’s architecture?
+ What notations should be used for describing architectural
+models?
+ Each architectural model only shows one view or
+perspective of the system.
+▪
+
+It might show how a system is decomposed into modules, how
+the run-time processes interact or the different ways in which
+system components are distributed across a network. For both
+design and documentation, you usually need to present multiple
+views of the software architecture.
+
+4 + 1 VIEW MODEL OF SOFTWARE ARCHITECTURE
+ A logical view, which shows the key abstractions in the
+
+system as objects or object classes.
+ A process view, which shows how, at run-time, the system
+is composed of interacting processes.
+ A development view, which shows how the software is
+decomposed for development.
+ A physical view, which shows the system hardware and
+how software components are distributed across the
+processors in the system.
+ All the view above related through a user view (+1)
+
+Lecture 7 Part 2
+Architectural patterns
+
+ARCHITECTURAL PATTERNS
+ Patterns are a means of representing, sharing and reusing
+
+knowledge.
+ An architectural pattern is a stylized description of good
+design practice, which has been tried and tested in different
+environments.
+ Patterns should include information about when they are
+and when the are not useful.
+ Patterns may be represented using tabular and graphical
+descriptions.
+
+THE MODEL-VIEW-CONTROLLER (MVC) PATTERN
+Name
+
+MVC (Model-View-Controller)
+
+Description
+
+Separates presentation and interaction from the system data. The system is
+structured into three logical components that interact with each other. The Model
+component manages the system data and associated operations on that data.
+The View component defines and manages how the data is presented to the
+user. The Controller component manages user interaction (e.g., key presses,
+mouse clicks, etc.) and passes these interactions to the View and the Model. See
+Figure
+Next figure shows the architecture of a web-based application system organized
+using the MVC pattern.
+Used when there are multiple ways to view and interact with data. Also used
+when the future requirements for interaction and presentation of data are
+unknown.
+Allows the data to change independently of its representation and vice versa.
+Supports presentation of the same data in different ways with changes made in
+one representation shown in all of them.
+Can involve additional code and code complexity when the data model and
+interactions are simple.
+
+Example
+When used
+
+Advantages
+
+Disadvantages
+
+THE ORGANIZATION OF THE MODEL-VIEW-CONTROLLER
+
+WEB APPLICATION ARCHITECTURE USING THE MVC PATTERN
+
+LAYERED ARCHITECTURE
+ Used to model the interfacing of sub-systems.
+ Organizes the system into a set of layers (or abstract
+
+machines) each of which provide a set of services.
+ Supports the incremental development of sub-systems in
+different layers. When a layer interface changes, only the
+adjacent layer is affected.
+ However, often artificial to structure systems in this way.
+
+THE LAYERED ARCHITECTURE PATTERN
+Name
+
+Layered architecture
+
+Description
+
+Organizes the system into layers with related functionality associated with each
+layer. A layer provides services to the layer above it so the lowest-level layers
+represent core services that are likely to be used throughout the system..
+
+Example
+
+A layered model of a system for sharing copyright documents held in different
+libraries.
+Used when building new facilities on top of existing systems; when the
+development is spread across several teams with each team responsibility for a
+layer of functionality; when there is a requirement for multi-level security.
+
+When used
+
+Advantages
+
+Allows replacement of entire layers so long as the interface is maintained.
+Redundant facilities (e.g., authentication) can be provided in each layer to increase
+the dependability of the system.
+
+Disadvantages In practice, providing a clean separation between layers is often difficult and a
+high-level layer may have to interact directly with lower-level layers rather than
+through the layer immediately below it. Performance can be a problem because of
+multiple levels of interpretation of a service request as it is processed at each
+layer.
+
+A GENERIC LAYERED ARCHITECTURE
+
+THE ARCHITECTURE OF THE LIBSYS SYSTEM
+
+REPOSITORY ARCHITECTURE
+ Sub-systems must exchange data. This may be done in
+
+two ways:
+▪
+
+Shared data is held in a central database or repository and may
+be accessed by all sub-systems;
+▪ Each sub-system maintains its own database and passes data
+explicitly to other sub-systems.
+ When large amounts of data are to be shared, the
+
+repository model of sharing is most commonly used as this
+is an efficient data sharing mechanism.
+
+THE REPOSITORY PATTERN
+Name
+Description
+
+Repository
+
+All data in a system is managed in a central repository that is accessible to all
+system components. Components do not interact directly, only through the
+repository.
+Example
+Next Figure is an example of an IDE where the components use a repository of
+system design information. Each software tool generates information which is then
+available for use by other tools.
+When used
+You should use this pattern when you have a system in which large volumes of
+information are generated that has to be stored for a long time. You may also use it
+in data-driven systems where the inclusion of data in the repository triggers an
+action or tool.
+Advantages
+Components can be independent—they do not need to know of the existence of
+other components. Changes made by one component can be propagated to all
+components. All data can be managed consistently (e.g., backups done at the
+same time) as it is all in one place.
+Disadvantages The repository is a single point of failure so problems in the repository affect the
+whole system. May be inefficiencies in organizing all communication through the
+repository. Distributing the repository across several computers may be difficult.
+
+A REPOSITORY ARCHITECTURE FOR AN IDE
+
+CLIENT-SERVER ARCHITECTURE
+ Distributed system model which shows how data and
+
+processing is distributed across a range of components.
+▪
+
+Can be implemented on a single computer.
+
+ Set of stand-alone servers which provide specific
+
+services such as printing, data management, etc.
+ Set of clients which call on these services.
+ Network which allows clients to access servers.
+
+THE CLIENT–SERVER PATTERN
+Name
+
+Client-server
+
+Description
+
+In a client–server architecture, the functionality of the system is organized into
+services, with each service delivered from a separate server. Clients are users of
+these services and access servers to make use of them.
+
+Example
+
+Next Figure is an example of a film and video/DVD library organized as a client–
+server system.
+Used when data in a shared database has to be accessed from a range of
+locations. Because servers can be replicated, may also be used when the load
+on a system is variable.
+The principal advantage of this model is that servers can be distributed across a
+network. General functionality (e.g., a printing service) can be available to all
+clients and does not need to be implemented by all services.
+
+When used
+
+Advantages
+
+Disadvantages
+
+Each service is a single point of failure so susceptible to denial of service attacks
+or server failure. Performance may be unpredictable because it depends on the
+network as well as the system. May be management problems if servers are
+owned by different organizations.
+
+A CLIENT–SERVER ARCHITECTURE FOR A FILM LIBRARY
+
+PIPE AND FILTER ARCHITECTURE
+ Functional transformations process their inputs to
+
+produce outputs.
+ May be referred to as a pipe and filter model (as in UNIX
+shell).
+ Variants of this approach are very common. When
+transformations are sequential, this is a batch sequential
+model which is extensively used in data processing
+systems.
+ Not really suitable for interactive systems.
+
+THE PIPE AND FILTER PATTERN
+Name
+
+Pipe and filter
+
+Description
+
+The processing of the data in a system is organized so that each processing
+component (filter) is discrete and carries out one type of data transformation.
+The data flows (as in a pipe) from one component to another for processing.
+
+Example
+
+Next Figure is an example of a pipe and filter system used for processing
+invoices.
+Commonly used in data processing applications (both batch- and transactionbased) where inputs are processed in separate stages to generate related
+outputs.
+Easy to understand and supports transformation reuse. Workflow style
+matches the structure of many business processes. Evolution by adding
+transformations is straightforward. Can be implemented as either a sequential
+or concurrent system.
+The format for data transfer has to be agreed upon between communicating
+transformations. Each transformation must parse its input and unparse its
+output to the agreed form. This increases system overhead and may mean
+that it is impossible to reuse functional transformations that use incompatible
+data structures.
+
+When used
+
+Advantages
+
+Disadvantages
+
+AN EXAMPLE OF THE PIPE AND FILTER ARCHITECTURE
+
+Lecture 7 Part 3
+Application architectures
+
+APPLICATION ARCHITECTURES
+ Application systems are designed to meet an
+
+organizational need.
+ As businesses have much in common, their application
+systems also tend to have a common architecture that
+reflects the application requirements.
+ A generic application architecture is an architecture for a
+type of software system that may be configured and
+adapted to create a system that meets specific
+requirements.
+
+USE OF APPLICATION ARCHITECTURES
+ As a starting point for architectural design.
+ As a design checklist.
+
+ As a way of organising the work of the development team.
+ As a means of assessing components for reuse.
+ As a vocabulary for talking about application types.
+
+EXAMPLES OF APPLICATION TYPES
+ Data processing applications
+▪
+
+Data driven applications that process data in batches without
+explicit user intervention during the processing.
+
+ Transaction processing applications
+▪
+
+Data-centred applications that process user requests and update
+information in a system database.
+
+ Event processing systems
+
+▪
+
+Applications where system actions depend on interpreting events
+from the system’s environment.
+
+ Language processing systems
+
+▪
+
+Applications where the users’ intentions are specified in a formal
+language that is processed and interpreted by the system.
+
+APPLICATION TYPE EXAMPLES
+ Focus here is on transaction processing and language
+
+processing systems.
+ Transaction processing systems
+▪
+
+E-commerce systems;
+▪ Reservation systems.
+ Language processing systems
+
+▪
+
+Compilers;
+▪ Command interpreters.
+
+TRANSACTION PROCESSING SYSTEMS
+ Process user requests for information from a database or
+
+requests to update the database.
+ From a user perspective a transaction is:
+▪
+
+Any coherent sequence of operations that satisfies a goal;
+▪ For example - find the times of flights from London to Paris.
+ Users make asynchronous requests for service which are
+
+then processed by a transaction manager.
+
+THE STRUCTURE OF TRANSACTION PROCESSING APPLICATIONS
+
+THE SOFTWARE ARCHITECTURE OF AN ATM SYSTEM
+
+INFORMATION SYSTEMS ARCHITECTURE
+ Information systems have a generic architecture that can
+
+be organized as a layered architecture.
+ These are transaction-based systems as interaction with
+these systems generally involves database transactions.
+ Layers include:
+▪
+
+The user interface
+▪ User communications
+▪ Information retrieval
+▪ System database
+
+LAYERED INFORMATION SYSTEM ARCHITECTURE
+
+THE ARCHITECTURE OF THE MHC-PMS
+
+WEB-BASED INFORMATION SYSTEMS
+ Information and resource management systems are now
+
+usually web-based systems where the user interfaces are
+implemented using a web browser.
+ For example, e-commerce systems are Internet-based
+resource management systems that accept electronic
+orders for goods or services and then arrange delivery of
+these goods or services to the customer.
+ In an e-commerce system, the application-specific layer
+includes additional functionality supporting a ‘shopping
+cart’ in which users can place a number of items in
+separate transactions, then pay for them all together in a
+single transaction.
+
+LANGUAGE PROCESSING SYSTEMS
+ Accept a natural or artificial language as input and generate
+
+some other representation of that language.
+ May include an interpreter to act on the instructions in the
+language that is being processed.
+ Used in situations where the easiest way to solve a problem
+is to describe an algorithm or describe the system data
+▪
+
+Meta-case tools process tool descriptions, method rules, etc
+and generate tools.
+
+THE ARCHITECTURE OF A LANGUAGE PROCESSING SYSTEM
+
+A PIPE AND FILTER COMPILER ARCHITECTURE
+
+A REPOSITORY ARCHITECTURE FOR A LANGUAGE PROCESSING
+SYSTEM
+
+KEY POINTS
+ A software architecture is a description of how a software
+
+system is organized.
+ Architectural design decisions include decisions on the type
+of application, the distribution of the system, the
+architectural styles to be used.
+ Architectures may be documented from several different
+perspectives or views such as a conceptual view, a logical
+view, a process view, and a development view.
+ Architectural patterns are a means of reusing knowledge
+about generic system architectures. They describe the
+architecture, explain when it may be used and describe its
+advantages and disadvantages.
+
+KEY POINTS
+ Models of application systems architectures help us
+
+understand and compare applications, validate
+application system designs and assess large-scale
+components for reuse.
+ Transaction processing systems are interactive systems
+that allow information in a database to be remotely
+accessed and modified by a number of users.
+ Language processing systems are used to translate texts
+from one language into another and to carry out the
+instructions specified in the input language. They include
+a translator and an abstract machine that executes the
+generated language.

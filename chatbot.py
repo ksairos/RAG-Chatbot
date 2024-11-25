@@ -51,7 +51,7 @@ class LangChainProcessor:
         return create_retrieval_chain(self.history_aware_retriever, self.qa_chain)
     
     def _create_history_aware_retriever(self):
-        faiss_path="data/faiss"
+        faiss_path="data/faiss_txt"
         
         retriever = FAISS.load_local(
             faiss_path,
