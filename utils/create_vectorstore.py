@@ -11,10 +11,10 @@ documents = loader.load()
 
 documents = [{"text": doc[0]} for doc in documents]
 
-text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+text_splitter = RecursiveCharacterTextSplitter(chunk_size=1028, chunk_overlap=100)
 texts = text_splitter.split_documents(documents)
 
-embeddings = OpenAIEmbeddings()
+embeddings = OpenAIEmbeddings(model="text-embedding-3-large")
 
 # Create the vector store
 vectorstore = FAISS.from_documents(documents, embeddings)
